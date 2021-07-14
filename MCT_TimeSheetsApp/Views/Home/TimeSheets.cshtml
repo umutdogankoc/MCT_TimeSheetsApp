@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "TimeSheets";
+    Layout = "~/Views/Layouts/_HomeLayout.cshtml";
+}
+
+@model MCT_TimeSheetsApp.Models._Layout.HomeLayoutModel
+@using MCT_TimeSheetsApp.Models.Home.Time_Sheets
+@using DataAccessLayer;
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-5 col-md-8 col-sm-12">
+                    <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>My Time Sheets</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Home/Dashboard"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item active">My Time Sheets</li>
+                    </ul>
+                </div>
+                <div class="col-lg-7 col-md-4 col-sm-12 text-right">
+                    <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                        <div class="sparkline text-left" data-type="line" data-width="8em" data-height="20px" data-line-Width="1" data-line-Color="#00c5dc"
+                             data-fill-Color="transparent">3,5,1,6,5,4,8,3</div>
+                        <span>Visitors</span>
+                    </div>
+                    <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                        <div class="sparkline text-left" data-type="line" data-width="8em" data-height="20px" data-line-Width="1" data-line-Color="#f4516c"
+                             data-fill-Color="transparent">4,6,3,2,5,6,5,4</div>
+                        <span>Visits</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Time Sheets Table <small>You can see the list of your time sheets.</small> </h2>
+                    </div>
+                    <div class="body">
+                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-default btn-filter" data-target="all">Todos</button>
+                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-success btn-filter" data-target="approved">Approved</button>
+                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-warning btn-filter" data-target="suspended">Suspended</button>
+                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-info btn-filter" data-target="pending">Pending</button>
+                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-danger btn-filter" data-target="blocked">Blocked</button>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-filter table-hover js-basic-example dataTable table-custom">
+                                <thead>
+                                    <tr data-target="all">
+                                        <th class="sorting_desc" aria-sort="descending">No</th>
+                                        <th>Starting Date</th>
+                                        <th>Ending Date</th>
+                                        <th>Owner ID</th>
+                                        <th>Approver ID</th>
+                                        <th>Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        foreach (Time_Sheet_Header timeSheets in Model.ResourceTimeSheetPageModel.ResourceTimeSheetHeaders)
+                                        {
+                                            <tr>
+                                                <td>@timeSheets.No_</td>
+                                                <td>@timeSheets.Starting_Date.ToShortDateString()</td>
+                                                <td>@timeSheets.Ending_Date.ToShortDateString()</td>
+                                                <td>@timeSheets.Owner_User_ID</td>
+                                                <td>@timeSheets.Approver_User_ID</td>
+                                                <td><a href="/Home/TimeSheetLines/?TimeSheetId=@timeSheets.C_systemId" class="btn btn-info" title="Edit"><i class="fa fa-edit" style="color:white"></i></a></td>
+                                            </tr>
+
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

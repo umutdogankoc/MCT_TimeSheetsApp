@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2eea1d2154d6471b8e825797121a0aa5" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseModel.MCTSPWebLoginCredentials" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.MCTTimeSheetAppSetup" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Resource" Width="1.5" PointX="6.875" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Time_Sheet_Header" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Time_Sheet_Line" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Salesperson_Purchaser" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DatabaseModel.Time_Sheet_Detail" Width="1.5" PointX="9.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

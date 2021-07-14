@@ -1,0 +1,314 @@
+﻿@model MCT_TimeSheetsApp.Models._Layout.HomeLayoutModel
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>MCT Time Sheet App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" />
+    <link href="~/Content/jvectormap/jquery-jvectormap-2.0.3.min.css" rel="stylesheet" />
+    <link href="~/Content/morrisjs/morris.min.css" rel="stylesheet" />
+    <link href="~/Content/nestable/jquery-nestable.css" rel="stylesheet" />
+    <link href="~/Content/jquery-datatable/fixedeader/dataTables.fixedcolumns.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/Content/jquery-datatable/fixedeader/dataTables.fixedheader.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/Content/jquery-datatable/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+    <!-- MAIN CSS -->
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+    <link href="~/Content/css/color_skins.css" rel="stylesheet" />
+
+    <!-- ALERTIFY-->
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
+
+</head>
+<body class="theme-cyan">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30"><img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+
+                <div class="navbar-brand">
+                    <a href="index.html"><img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>
+                </div>
+
+                <div class="navbar-right">
+                    <form id="navbar-search" class="navbar-form search-form">
+                        <input value="" class="form-control" placeholder="Search here..." type="text">
+                        <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                    </form>
+
+                    <div id="navbar-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="app-calendar.html" class="icon-menu d-none d-sm-block d-md-none d-lg-block"><i class="icon-calendar"></i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                    <i class="icon-bell"></i>
+                                    <span class="notification-dot"></span>
+                                </a>
+                                <ul class="dropdown-menu notifications">
+                                    <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="icon-info text-warning"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                    <span class="timestamp">10:00 AM Today</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="icon-like text-success"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Your New Campaign <strong>Holiday Sale</strong> is approved.</p>
+                                                    <span class="timestamp">11:30 AM Today</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="icon-pie-chart text-info"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Website visits from Twitter is 27% higher than last week.</p>
+                                                    <span class="timestamp">04:00 PM Today</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <i class="icon-info text-danger"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <p class="text">Error on website analytics configurations</p>
+                                                    <span class="timestamp">Yesterday</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="page-login.html" class="icon-menu"><i class="icon-login"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="left-sidebar" class="sidebar">
+            <div class="sidebar-scroll">
+                <div class="user-account">
+                    <img src="~/Content/Images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                    <div class="dropdown">
+                        <span>Welcome,</span>
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>@Model.SessionResource.Name</strong></a>
+                        <ul class="dropdown-menu dropdown-menu-right account">
+                            <li><a href="page-profile2.html"><i class="icon-user"></i>My Profile</a></li>
+                            <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="page-login.html"><i class="icon-power"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <ul class="row list-unstyled">
+                        <li class="col-4">
+                            <small>Sales</small>
+                            <h6>456</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Order</small>
+                            <h6>1350</h6>
+                        </li>
+                        <li class="col-4">
+                            <small>Revenue</small>
+                            <h6>$2.13B</h6>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content p-l-0 p-r-0">
+                    <div class="tab-pane active" id="menu">
+                        <nav id="left-sidebar-nav" class="sidebar-nav">
+                            <ul id="main-menu" class="metismenu">
+                                <li id="DashboradLi">
+                                    <a href="/Home/Dashboard"><i class="icon-home"></i> <span>Dashboard</span></a>
+                                </li>
+                                <li id="TimeSheetLi">
+                                    <a href="/Home/TimeSheets"><i class="icon-notebook"></i> <span>Time Sheets</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="tab-pane p-l-15 p-r-15" id="setting">
+                        <h6>Choose Skin</h6>
+                        <ul class="choose-skin list-unstyled">
+                            <li data-theme="purple">
+                                <div class="purple"></div>
+                                <span>Purple</span>
+                            </li>
+                            <li data-theme="blue">
+                                <div class="blue"></div>
+                                <span>Blue</span>
+                            </li>
+                            <li data-theme="cyan" class="active">
+                                <div class="cyan"></div>
+                                <span>Cyan</span>
+                            </li>
+                            <li data-theme="green">
+                                <div class="green"></div>
+                                <span>Green</span>
+                            </li>
+                            <li data-theme="orange">
+                                <div class="orange"></div>
+                                <span>Orange</span>
+                            </li>
+                            <li data-theme="blush">
+                                <div class="blush"></div>
+                                <span>Blush</span>
+                            </li>
+                        </ul>
+                        <hr>
+                        <h6>General Settings</h6>
+                        <ul class="setting-list list-unstyled">
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span>Report Panel Usag</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox" checked>
+                                    <span>Email Redirect</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox" checked>
+                                    <span>Notifications</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span>Auto Updates</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span>Offline</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fancy-checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span>Location Permission</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @RenderBody()
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="~/Content/js/jquery-3.5.1.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/alertify.min.js"></script>
+
+    <script src="~/Content/js/libscripts.bundle.js"></script>
+    <script src="~/Content/js/vendorscripts.bundle.js"></script>
+    <script src="~/Content/js/datatablescripts.bundle.js"></script>
+
+    <script src="~/Content/jquery-datatable/buttons/buttons.bootstrap4.min.js"></script>
+    <script src="~/Content/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
+    <script src="~/Content/jquery-datatable/buttons/buttons.print.min.js"></script>
+    <script src="~/Content/jquery-datatable/buttons/buttons.html5.min.js"></script>
+    <script src="~/Content/jquery-datatable/buttons/buttons.colVis.min.js"></script>
+
+
+    <script src="~/Content/js/jvectormap.bundle.js"></script>
+    <script src="~/Content/js/morrisscripts.bundle.js"></script>
+    <script src="~/Content/js/knob.bundle.js"></script>
+    <script src="~/Content/nestable/jquery.nestable.js"></script>
+
+    <script src="~/Content/js/mainscripts.bundle.js"></script>
+    <script src="~/Content/js/sortable-nestable.js"></script>
+    <script src="~/Content/js/index6.js"></script>
+
+    <script src="~/Content/tables/jquery-datatable.js"></script>
+    <script src="~/Content/tables/editable-table.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.star').on('click', function () {
+                $(this).toggleClass('star-checked');
+            });
+
+            $('.ckbox label').on('click', function () {
+                $(this).parents('tr').toggleClass('selected');
+            });
+
+            $('.btn-filter').on('click', function () {
+                var $target = $(this).data('target');
+                if ($target != 'all') {
+                    $('.table tbody tr').css('display', 'none');
+                    $('.table tbody tr[data-status="' + $target + '"]').fadeIn('slow');
+                } else {
+                    $('.table tbody tr').css('display', 'none').fadeIn('slow');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

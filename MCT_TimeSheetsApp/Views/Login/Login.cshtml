@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>MCT Time Sheet App-Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- MAIN CSS -->
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+    <link href="~/Content/css/color_skins.css" rel="stylesheet" />
+
+    <!-- ALERTIFY-->
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="theme-cyan">
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <div class="vertical-align-wrap">
+            <div class="vertical-align-middle auth-main">
+                <div class="auth-box">
+                    <div class="top">
+                        <img src="https://www.wrraptheme.com/templates/lucid/html/assets/images/logo-white.svg" alt="Lucid">
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <p class="lead">Login to your account</p>
+                        </div>
+                        <div class="body">
+                            <form id="CP_Login_Form" class="form-auth-small">
+                                <div class="form-group">
+                                    <label for="signin-email" class="control-label sr-only">Email</label>
+                                    <input id="CP_Username" type="text" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="signin-password" class="control-label sr-only">Password</label>
+                                    <input id="CP_Password" type="password" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="form-group clearfix">
+                                    <label class="fancy-checkbox element-left">
+                                        <input type="checkbox">
+                                        <span>Remember me</span>
+                                    </label>
+                                </div>
+                                <button id="BtnLoginSubmit" type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
+                                <button id="BtnLoginSubmitSpinner" type="submit" class="btn btn-lg btn-block btn-primary" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    Loading...
+                                </button>
+                                <div class="bottom">
+                                    <span class="helper-text m-b-10"><i class="fa fa-lock"></i> <a href="ForgotPass">Forgot password?</a></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END WRAPPER -->
+</body>
+</html>
+<script src="~/Content/js/jquery-3.5.1.min.js"></script>
+<script src="~/Content/js/bootstrap.min.js"></script>
+<script src="~/Scripts/Login/LoginScript.js"></script>
+<script src="~/Scripts/alertify.min.js"></script>

@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CRONUS International Ltd_$MCTSPWebLoginCredentials$ba5f5175-a366-4e84-a812-534a9d57fc13">
+          <Key>
+            <PropertyRef Name="ResourceNo" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="ResourceNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MCTSPLoginPrimaryKey" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ChangePassword" Type="tinyint" Nullable="false" />
+          <Property Name="NoSeries" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CRONUS International Ltd_$MCTTimeSheetAppSetup$ba5f5175-a366-4e84-a812-534a9d57fc13">
+          <Key>
+            <PropertyRef Name="MCTTimeSheetAppPrimaryKey" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="MCTTimeSheetAppPrimaryKey" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="MCTTimeSheetAppLoginNos" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MCTTimeSheetAppAdminEmail" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CRONUS International Ltd_$Resource$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Search Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Address 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Social Security No_" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Job Title" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Education" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Contract Class" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Employment Date" Type="datetime" Nullable="false" />
+          <Property Name="Resource Group No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Global Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Global Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Base Unit of Measure" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Direct Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Indirect Cost _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Profit _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Price_Profit Calculation" Type="int" Nullable="false" />
+          <Property Name="Unit Price" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Vendor No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last Date Modified" Type="datetime" Nullable="false" />
+          <Property Name="Blocked" Type="tinyint" Nullable="false" />
+          <Property Name="Gen_ Prod_ Posting Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Picture" Type="image" />
+          <Property Name="Post Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="County" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Automatic Ext_ Texts" Type="tinyint" Nullable="false" />
+          <Property Name="No_ Series" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tax Group Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="VAT Prod_ Posting Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Country_Region Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="IC Partner Purch_ G_L Acc_ No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Image" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Privacy Blocked" Type="tinyint" Nullable="false" />
+          <Property Name="Use Time Sheet" Type="tinyint" Nullable="false" />
+          <Property Name="Time Sheet Owner User ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Time Sheet Approver User ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Default Deferral Template Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Service Zone Filter" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CRONUS International Ltd_$Salesperson_Purchaser$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Commission _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Image" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Privacy Blocked" Type="tinyint" Nullable="false" />
+          <Property Name="Global Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Global Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="E-Mail" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="Phone No_" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Job Title" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Search E-Mail" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="E-Mail 2" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CRONUS International Ltd_$Time Sheet Detail$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="Time Sheet No_" />
+            <PropertyRef Name="Time Sheet Line No_" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Time Sheet No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Time Sheet Line No_" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Resource No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Task No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Cause of Absence Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Service Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Service Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Posted Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Assembly Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Assembly Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Posted" Type="tinyint" Nullable="false" />
+          <Property Name="Dimension Set ID" Type="int" Nullable="false" />
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Last Modified DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Job Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CRONUS International Ltd_$Time Sheet Header$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Starting Date" Type="datetime" Nullable="false" />
+          <Property Name="Ending Date" Type="datetime" Nullable="false" />
+          <Property Name="Resource No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Owner User ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Approver User ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CRONUS International Ltd_$Time Sheet Line$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="Time Sheet No_" />
+            <PropertyRef Name="Line No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Time Sheet No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Line No_" Type="int" Nullable="false" />
+          <Property Name="Time Sheet Starting Date" Type="datetime" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Job No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Task No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Cause of Absence Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Work Type Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Approver ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Service Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Service Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Chargeable" Type="tinyint" Nullable="false" />
+          <Property Name="Assembly Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Assembly Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Approved By" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Approval Date" Type="datetime" Nullable="false" />
+          <Property Name="Posted" Type="tinyint" Nullable="false" />
+          <Property Name="Dimension Set ID" Type="int" Nullable="false" />
+          <Property Name="Job Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DatabaseModelStoreContainer">
+          <EntitySet Name="CRONUS International Ltd_$MCTSPWebLoginCredentials$ba5f5175-a366-4e84-a812-534a9d57fc13" EntityType="Self.CRONUS International Ltd_$MCTSPWebLoginCredentials$ba5f5175-a366-4e84-a812-534a9d57fc13" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRONUS International Ltd_$MCTTimeSheetAppSetup$ba5f5175-a366-4e84-a812-534a9d57fc13" EntityType="Self.CRONUS International Ltd_$MCTTimeSheetAppSetup$ba5f5175-a366-4e84-a812-534a9d57fc13" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRONUS International Ltd_$Resource$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.CRONUS International Ltd_$Resource$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRONUS International Ltd_$Salesperson_Purchaser$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.CRONUS International Ltd_$Salesperson_Purchaser$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRONUS International Ltd_$Time Sheet Detail$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.CRONUS International Ltd_$Time Sheet Detail$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRONUS International Ltd_$Time Sheet Header$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.CRONUS International Ltd_$Time Sheet Header$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CRONUS International Ltd_$Time Sheet Line$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.CRONUS International Ltd_$Time Sheet Line$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MCTSPWebLoginCredentials">
+          <Key>
+            <PropertyRef Name="ResourceNo" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="MCTSPLoginPrimaryKey" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ChangePassword" Type="Byte" Nullable="false" />
+          <Property Name="NoSeries" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+          <Property Name="ResourceNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MCTTimeSheetAppSetup">
+          <Key>
+            <PropertyRef Name="MCTTimeSheetAppPrimaryKey" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="MCTTimeSheetAppPrimaryKey" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MCTTimeSheetAppLoginNos" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MCTTimeSheetAppAdminEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Search_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Social_Security_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Education" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contract_Class" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employment_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Resource_Group_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Global_Dimension_1_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Global_Dimension_2_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Base_Unit_of_Measure" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Direct_Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Indirect_Cost__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Profit__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Price_Profit_Calculation" Type="Int32" Nullable="false" />
+          <Property Name="Unit_Price" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Vendor_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last_Date_Modified" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Blocked" Type="Byte" Nullable="false" />
+          <Property Name="Gen__Prod__Posting_Group" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Post_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="County" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Automatic_Ext__Texts" Type="Byte" Nullable="false" />
+          <Property Name="No__Series" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tax_Group_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VAT_Prod__Posting_Group" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Country_Region_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IC_Partner_Purch__G_L_Acc__No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Image" Type="Guid" Nullable="false" />
+          <Property Name="Privacy_Blocked" Type="Byte" Nullable="false" />
+          <Property Name="Use_Time_Sheet" Type="Byte" Nullable="false" />
+          <Property Name="Time_Sheet_Owner_User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Time_Sheet_Approver_User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Default_Deferral_Template_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Service_Zone_Filter" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Time_Sheet_Header">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Starting_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Ending_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Resource_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Owner_User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Approver_User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Time_Sheet_Line">
+          <Key>
+            <PropertyRef Name="Time_Sheet_No_" />
+            <PropertyRef Name="Line_No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Time_Sheet_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Time_Sheet_Starting_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Job_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_Task_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cause_of_Absence_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Work_Type_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Approver_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Service_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Service_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Chargeable" Type="Byte" Nullable="false" />
+          <Property Name="Assembly_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Assembly_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Approved_By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Approval_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Posted" Type="Byte" Nullable="false" />
+          <Property Name="Dimension_Set_ID" Type="Int32" Nullable="false" />
+          <Property Name="Job_Id" Type="Guid" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MCT_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MCTSPWebLoginCredentials" EntityType="DatabaseModel.MCTSPWebLoginCredentials" />
+          <EntitySet Name="MCTTimeSheetAppSetup" EntityType="DatabaseModel.MCTTimeSheetAppSetup" />
+          <EntitySet Name="Resource" EntityType="DatabaseModel.Resource" />
+          <EntitySet Name="Time_Sheet_Header" EntityType="DatabaseModel.Time_Sheet_Header" />
+          <EntitySet Name="Time_Sheet_Line" EntityType="DatabaseModel.Time_Sheet_Line" />
+          <EntitySet Name="Salesperson_Purchaser" EntityType="DatabaseModel.Salesperson_Purchaser" />
+          <EntitySet Name="Time_Sheet_Detail" EntityType="DatabaseModel.Time_Sheet_Detail" />
+        </EntityContainer>
+        <EntityType Name="Salesperson_Purchaser">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Commission__" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Image" Type="Guid" Nullable="false" />
+          <Property Name="Privacy_Blocked" Type="Byte" Nullable="false" />
+          <Property Name="Global_Dimension_1_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Global_Dimension_2_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="E_Mail" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_No_" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Title" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Search_E_Mail" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="E_Mail_2" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Time_Sheet_Detail">
+          <Key>
+            <PropertyRef Name="Time_Sheet_No_" />
+            <PropertyRef Name="Time_Sheet_Line_No_" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Time_Sheet_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Time_Sheet_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Resource_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Job_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Task_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Cause_of_Absence_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Service_Order_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Service_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Posted_Quantity" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Assembly_Order_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Assembly_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Posted" Type="Byte" Nullable="false" />
+          <Property Name="Dimension_Set_ID" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Last_Modified_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Job_Id" Type="Guid" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="MCT_Entities">
+          <EntitySetMapping Name="MCTSPWebLoginCredentials">
+            <EntityTypeMapping TypeName="DatabaseModel.MCTSPWebLoginCredentials">
+              <MappingFragment StoreEntitySet="CRONUS International Ltd_$MCTSPWebLoginCredentials$ba5f5175-a366-4e84-a812-534a9d57fc13">
+                <ScalarProperty Name="ResourceNo" ColumnName="ResourceNo" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="MCTSPLoginPrimaryKey" ColumnName="MCTSPLoginPrimaryKey" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ChangePassword" ColumnName="ChangePassword" />
+                <ScalarProperty Name="NoSeries" ColumnName="NoSeries" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedTime" ColumnName="ModifiedTime" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCTTimeSheetAppSetup">
+            <EntityTypeMapping TypeName="DatabaseModel.MCTTimeSheetAppSetup">
+              <MappingFragment StoreEntitySet="CRONUS International Ltd_$MCTTimeSheetAppSetup$ba5f5175-a366-4e84-a812-534a9d57fc13">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="MCTTimeSheetAppPrimaryKey" ColumnName="MCTTimeSheetAppPrimaryKey" />
+                <ScalarProperty Name="MCTTimeSheetAppLoginNos" ColumnName="MCTTimeSheetAppLoginNos" />
+                <ScalarProperty Name="MCTTimeSheetAppAdminEmail" ColumnName="MCTTimeSheetAppAdminEmail" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resource">
+            <EntityTypeMapping TypeName="DatabaseModel.Resource">
+              <MappingFragment StoreEntitySet="CRONUS International Ltd_$Resource$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Search_Name" ColumnName="Search Name" />
+                <ScalarProperty Name="Name_2" ColumnName="Name 2" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Address_2" ColumnName="Address 2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Social_Security_No_" ColumnName="Social Security No_" />
+                <ScalarProperty Name="Job_Title" ColumnName="Job Title" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Contract_Class" ColumnName="Contract Class" />
+                <ScalarProperty Name="Employment_Date" ColumnName="Employment Date" />
+                <ScalarProperty Name="Resource_Group_No_" ColumnName="Resource Group No_" />
+                <ScalarProperty Name="Global_Dimension_1_Code" ColumnName="Global Dimension 1 Code" />
+                <ScalarProperty Name="Global_Dimension_2_Code" ColumnName="Global Dimension 2 Code" />
+                <ScalarProperty Name="Base_Unit_of_Measure" ColumnName="Base Unit of Measure" />
+                <ScalarProperty Name="Direct_Unit_Cost" ColumnName="Direct Unit Cost" />
+                <ScalarProperty Name="Indirect_Cost__" ColumnName="Indirect Cost _" />
+                <ScalarProperty Name="Unit_Cost" ColumnName="Unit Cost" />
+                <ScalarProperty Name="Profit__" ColumnName="Profit _" />
+                <ScalarProperty Name="Price_Profit_Calculation" ColumnName="Price_Profit Calculation" />
+                <ScalarProperty Name="Unit_Price" ColumnName="Unit Price" />
+                <ScalarProperty Name="Vendor_No_" ColumnName="Vendor No_" />
+                <ScalarProperty Name="Last_Date_Modified" ColumnName="Last Date Modified" />
+                <ScalarProperty Name="Blocked" ColumnName="Blocked" />
+                <ScalarProperty Name="Gen__Prod__Posting_Group" ColumnName="Gen_ Prod_ Posting Group" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Automatic_Ext__Texts" ColumnName="Automatic Ext_ Texts" />
+                <ScalarProperty Name="No__Series" ColumnName="No_ Series" />
+                <ScalarProperty Name="Tax_Group_Code" ColumnName="Tax Group Code" />
+                <ScalarProperty Name="VAT_Prod__Posting_Group" ColumnName="VAT Prod_ Posting Group" />
+                <ScalarProperty Name="Country_Region_Code" ColumnName="Country_Region Code" />
+                <ScalarProperty Name="IC_Partner_Purch__G_L_Acc__No_" ColumnName="IC Partner Purch_ G_L Acc_ No_" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Privacy_Blocked" ColumnName="Privacy Blocked" />
+                <ScalarProperty Name="Use_Time_Sheet" ColumnName="Use Time Sheet" />
+                <ScalarProperty Name="Time_Sheet_Owner_User_ID" ColumnName="Time Sheet Owner User ID" />
+                <ScalarProperty Name="Time_Sheet_Approver_User_ID" ColumnName="Time Sheet Approver User ID" />
+                <ScalarProperty Name="Default_Deferral_Template_Code" ColumnName="Default Deferral Template Code" />
+                <ScalarProperty Name="Service_Zone_Filter" ColumnName="Service Zone Filter" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Time_Sheet_Header">
+            <EntityTypeMapping TypeName="DatabaseModel.Time_Sheet_Header">
+              <MappingFragment StoreEntitySet="CRONUS International Ltd_$Time Sheet Header$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="Starting_Date" ColumnName="Starting Date" />
+                <ScalarProperty Name="Ending_Date" ColumnName="Ending Date" />
+                <ScalarProperty Name="Resource_No_" ColumnName="Resource No_" />
+                <ScalarProperty Name="Owner_User_ID" ColumnName="Owner User ID" />
+                <ScalarProperty Name="Approver_User_ID" ColumnName="Approver User ID" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Time_Sheet_Line">
+            <EntityTypeMapping TypeName="DatabaseModel.Time_Sheet_Line">
+              <MappingFragment StoreEntitySet="CRONUS International Ltd_$Time Sheet Line$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="Time_Sheet_No_" ColumnName="Time Sheet No_" />
+                <ScalarProperty Name="Line_No_" ColumnName="Line No_" />
+                <ScalarProperty Name="Time_Sheet_Starting_Date" ColumnName="Time Sheet Starting Date" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Job_No_" ColumnName="Job No_" />
+                <ScalarProperty Name="Job_Task_No_" ColumnName="Job Task No_" />
+                <ScalarProperty Name="Cause_of_Absence_Code" ColumnName="Cause of Absence Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Work_Type_Code" ColumnName="Work Type Code" />
+                <ScalarProperty Name="Approver_ID" ColumnName="Approver ID" />
+                <ScalarProperty Name="Service_Order_No_" ColumnName="Service Order No_" />
+                <ScalarProperty Name="Service_Order_Line_No_" ColumnName="Service Order Line No_" />
+                <ScalarProperty Name="Chargeable" ColumnName="Chargeable" />
+                <ScalarProperty Name="Assembly_Order_No_" ColumnName="Assembly Order No_" />
+                <ScalarProperty Name="Assembly_Order_Line_No_" ColumnName="Assembly Order Line No_" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Approved_By" ColumnName="Approved By" />
+                <ScalarProperty Name="Approval_Date" ColumnName="Approval Date" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Dimension_Set_ID" ColumnName="Dimension Set ID" />
+                <ScalarProperty Name="Job_Id" ColumnName="Job Id" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Salesperson_Purchaser">
+            <EntityTypeMapping TypeName="DatabaseModel.Salesperson_Purchaser">
+              <MappingFragment StoreEntitySet="CRONUS International Ltd_$Salesperson_Purchaser$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+                <ScalarProperty Name="E_Mail_2" ColumnName="E-Mail 2" />
+                <ScalarProperty Name="Search_E_Mail" ColumnName="Search E-Mail" />
+                <ScalarProperty Name="Job_Title" ColumnName="Job Title" />
+                <ScalarProperty Name="Phone_No_" ColumnName="Phone No_" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="Global_Dimension_2_Code" ColumnName="Global Dimension 2 Code" />
+                <ScalarProperty Name="Global_Dimension_1_Code" ColumnName="Global Dimension 1 Code" />
+                <ScalarProperty Name="Privacy_Blocked" ColumnName="Privacy Blocked" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Commission__" ColumnName="Commission _" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Time_Sheet_Detail">
+            <EntityTypeMapping TypeName="DatabaseModel.Time_Sheet_Detail">
+              <MappingFragment StoreEntitySet="CRONUS International Ltd_$Time Sheet Detail$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+                <ScalarProperty Name="Job_Id" ColumnName="Job Id" />
+                <ScalarProperty Name="Last_Modified_DateTime" ColumnName="Last Modified DateTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Dimension_Set_ID" ColumnName="Dimension Set ID" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Assembly_Order_Line_No_" ColumnName="Assembly Order Line No_" />
+                <ScalarProperty Name="Assembly_Order_No_" ColumnName="Assembly Order No_" />
+                <ScalarProperty Name="Posted_Quantity" ColumnName="Posted Quantity" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Service_Order_Line_No_" ColumnName="Service Order Line No_" />
+                <ScalarProperty Name="Service_Order_No_" ColumnName="Service Order No_" />
+                <ScalarProperty Name="Cause_of_Absence_Code" ColumnName="Cause of Absence Code" />
+                <ScalarProperty Name="Job_Task_No_" ColumnName="Job Task No_" />
+                <ScalarProperty Name="Job_No_" ColumnName="Job No_" />
+                <ScalarProperty Name="Resource_No_" ColumnName="Resource No_" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Time_Sheet_Line_No_" ColumnName="Time Sheet Line No_" />
+                <ScalarProperty Name="Time_Sheet_No_" ColumnName="Time Sheet No_" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
