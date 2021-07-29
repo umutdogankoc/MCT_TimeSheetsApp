@@ -65,9 +65,9 @@
                                         <th>Job No.</th>
                                         <th>Job Task No.</th>
                                         <th>Descripton</th>
-                                        @for (int i = 0; i < 7; i++)
+                                        @for (DateTime i = @Model.ResourceTimeSheetPageModel.CurrentTimeSheetHeader.Starting_Date; i < @Model.ResourceTimeSheetPageModel.CurrentTimeSheetHeader.Ending_Date.AddDays(1);i= i.AddDays(1))
                                         {
-                                            <th>@Model.ResourceTimeSheetPageModel.CurrentTimeSheetHeader.Starting_Date.AddDays(i).ToShortDateString()</th>
+                                            <th>@i.ToShortDateString()</th>
                                         }
                                         <th>Actions</th>
 
@@ -81,9 +81,9 @@
                                             <td>@timesheetline.Job_Task_No_</td>
                                             <td>@timesheetline.Description</td>
 
-                                            @for (int i = 0; i < 7; i++)
+                                            @foreach (Time_Sheet_Detail lineDetail in Model.ResourceTimeSheetPageModel.ResourceTimeSheetLineDetails.Where(p=>p.Time_Sheet_Line_No_==timesheetline.Line_No_).ToList())
                                             {
-                                                <td class="timeSheetLineHours">@Model.ResourceTimeSheetPageModel.CurrentTimeSheetHeader.Starting_Date.AddDays(i).ToShortDateString()</td>
+                                                <td dateId="@lineDetail.Date.ToShortDateString()" lineId="@lineDetail.Time_Sheet_Line_No_" headerId="@lineDetail.Time_Sheet_No_" class="timeSheetLineHours">@lineDetail.Quantity.ToString("N0")</td>
                                             }
 
                                             <td class="actions">

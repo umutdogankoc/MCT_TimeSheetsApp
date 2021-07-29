@@ -4,7 +4,6 @@ using MCT_TimeSheetsApp.Models._Layout;
 using ServiceLayer;
 using System;
 using System.Web.Mvc;
-
 namespace MCT_TimeSheetsApp.Controllers
 {
     public class HomeController : Controller
@@ -45,6 +44,8 @@ namespace MCT_TimeSheetsApp.Controllers
             Time_Sheet_Header currentHeader = new TimeSheetHeaderService().GetBySystemId(TimeSheetId);
             homeLayout.ResourceTimeSheetPageModel = pageFillingEngine.FillTimeSheetLinePage(currentHeader);
             return View(homeLayout);
+           
         }
+
     }
 }

@@ -34,11 +34,32 @@ namespace MCT_TimeSheetsApp.Engine
 
             foreach (Time_Sheet_Line lines in headerLines)
             {
-                List<Time_Sheet_Detail> timeSheetDetail = detailService.GetByLineNo(timeSheetHeader.No_, lines.Line_No_);
-                timeSheetLineDetails.AddRange(timeSheetDetail);
+                for (DateTime i = timeSheetHeader.Starting_Date; i < timeSheetHeader.Ending_Date.AddDays(1); i=i.AddDays(1))
+                {
+                    Time_Sheet_Detail lineDetail = detailService.Get(lines.Time_Sheet_No_, lines.Line_No_, i);
+
+                    if (lineDetail!=null)
+                    {
+                        timeSheetLineDetails.Add(lineDetail);
+                    }
+                    else
+                    {
+                        Time_Sheet_Detail newDetail = new Time_Sheet_Detail()
+                        {
+                            Time_Sheet_No_ = lines.Time_Sheet_No_,
+                            Time_Sheet_Line_No_ = lines.Line_No_,
+                            Date = i,
+                            Quantity = 0,
+                            Posted_Quantity = 0,
+                            Status = 0,  
+                        };
+                        timeSheetLineDetails.Add(newDetail);
+                    }
+                }
             }
             model.ResourceTimeSheetLineDetails = timeSheetLineDetails;
             return model;
         }
+
     }
 }

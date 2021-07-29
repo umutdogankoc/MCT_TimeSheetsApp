@@ -33,6 +33,7 @@ namespace ServiceLayer
         public Time_Sheet_Detail Insert(Time_Sheet_Detail param)
         {
             throw new NotImplementedException();
+
         }
 
         public Time_Sheet_Detail Update(Time_Sheet_Detail param)
