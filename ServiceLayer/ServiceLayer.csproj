@@ -53,14 +53,20 @@
   <ItemGroup>
     <Compile Include="Base\BaseService.cs" />
     <Compile Include="Base\IRepository.cs" />
+    <Compile Include="JobPlanningLineExService.cs" />
+    <Compile Include="JobPlanningLineService.cs" />
+    <Compile Include="JobService.cs" />
+    <Compile Include="JobTaskService.cs" />
     <Compile Include="MCTTimeSheetAppSetupService.cs" />
     <Compile Include="MCT_WLCService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceExtService.cs" />
     <Compile Include="ResourceService.cs" />
     <Compile Include="SalesPersonService.cs" />
     <Compile Include="TimeSheetDetailService.cs" />
     <Compile Include="TimeSheetHeaderService.cs" />
     <Compile Include="TimeSheetLineService.cs" />
+    <Compile Include="WorkTypeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

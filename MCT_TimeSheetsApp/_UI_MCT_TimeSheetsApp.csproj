@@ -142,6 +142,15 @@
     <Content Include="Connected Services\TimeSheetWS\MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\TimeSheetWS\MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TimeSheetWS\MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TimeSheetWS\MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\TimeSheetWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -175,6 +184,7 @@
     <Content Include="Content\fonts\simple-Line-Icons.svg" />
     <Content Include="Content\fonts\weathericons-regular-webfont.svg" />
     <Content Include="Content\Images\auth_bg.jpg" />
+    <Content Include="Content\Images\IMG_Default.jpg" />
     <Content Include="Content\Images\user.png" />
     <Content Include="Content\jquery-datatable\buttons\buttons.bootstrap4.min.js" />
     <Content Include="Content\jquery-datatable\buttons\buttons.colVis.min.js" />
@@ -549,6 +559,14 @@
     <Content Include="ProjectTemplate\lucid\html\light\widgets-weather.html" />
     <Content Include="Scripts\alertify.js" />
     <Content Include="Scripts\alertify.min.js" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <None Include="Scripts\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\Login\ForgotPasswordScript.js" />
     <Content Include="Scripts\Login\LoginScript.js" />
     <Content Include="Scripts\Login\PasswordResetScript.js" />
@@ -571,6 +589,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BaseResponseModel.cs" />
+    <Compile Include="Models\Home\Dashboard\DashboardPageModel.cs" />
+    <Compile Include="Models\Home\Time Sheets\JobPlanningLinesPageModel.cs" />
+    <Compile Include="Models\Home\Time Sheets\ResourceJobPlanningLinesModel.cs" />
     <Compile Include="Models\Home\Time Sheets\TimeSheetLineModel.cs" />
     <Compile Include="Models\Home\Time Sheets\TimeSheetPageModel.cs" />
     <Compile Include="Models\Login\LoginPostModel.cs" />
@@ -578,6 +599,9 @@
     <Compile Include="Models\Login\NewPasswordModel.cs" />
     <Compile Include="Models\Login\NewPasswordResponseModel.cs" />
     <Compile Include="Models\Login\PasswordResetModel.cs" />
+    <Compile Include="Models\Update\CreateTimeSheetLineModel.cs" />
+    <Compile Include="Models\Update\CreateTimeSheetLineResponseModel.cs" />
+    <Compile Include="Models\Update\CreateTimeSheetModel.cs" />
     <Compile Include="Models\Update\UpdateResourceTimeSheetBaseModel.cs" />
     <Compile Include="Models\Update\UpdateResourceTimeSheetListModel.cs" />
     <Compile Include="Models\Update\UpdateResourceTimeSheetResponseModel.cs" />
@@ -593,7 +617,7 @@
     <Content Include="Content\fonts\weathericons-regular-webfont.ttf" />
     <Content Include="Content\fonts\weathericons-regular-webfont.woff" />
     <Content Include="Content\fonts\weathericons-regular-webfontd41d.eot" />
-    <None Include="Connected Services\TimeSheetWS\TimeSheetAppWebService.wsdl" />
+    <None Include="Connected Services\TimeSheetWS\UDKTimeSheetWS.wsdl" />
     <None Include="packages.config" />
     <Content Include="ProjectTemplate\lucid\html\assets\vendor\summernote\dist\font\summernoted41d.eot" />
     <Content Include="ProjectTemplate\lucid\html\assets\vendor\summernote\dist\font\summernotef534.eot" />

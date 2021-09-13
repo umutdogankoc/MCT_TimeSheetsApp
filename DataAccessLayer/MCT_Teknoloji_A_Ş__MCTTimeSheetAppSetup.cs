@@ -12,15 +12,12 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Time_Sheet_Header
+    public partial class MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup
     {
         public byte[] timestamp { get; set; }
-        public string No_ { get; set; }
-        public System.DateTime Starting_Date { get; set; }
-        public System.DateTime Ending_Date { get; set; }
-        public string Resource_No_ { get; set; }
-        public string Owner_User_ID { get; set; }
-        public string Approver_User_ID { get; set; }
+        public string MCTTimeSheetAppPrimaryKey { get; set; }
+        public string MCTTimeSheetAppLoginNos { get; set; }
+        public string MCTTimeSheetAppAdminEmail { get; set; }
         public System.Guid C_systemId { get; set; }
     }
 }

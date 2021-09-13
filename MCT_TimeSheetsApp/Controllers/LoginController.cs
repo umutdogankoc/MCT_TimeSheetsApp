@@ -24,10 +24,10 @@ namespace MCT_TimeSheetsApp.Controllers
 
             try
             {
-                MCTSPWebLoginCredentials loginUser = mCT_WLCService.CheckLogin(model.Username, model.Password);
+                MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials loginUser = mCT_WLCService.CheckLogin(model.Username, model.Password);
                 if (loginUser!=null)
                 {
-                    Resource sessionResource = new ResourceService().GetById(loginUser.ResourceNo);
+                    MCT_Teknoloji_A_Ş__Resource sessionResource = new ResourceService().GetById(loginUser.ResourceNo);
                     if (sessionResource != null)
                     {
                         Session["ResourceSession"] = sessionResource;
@@ -71,7 +71,7 @@ namespace MCT_TimeSheetsApp.Controllers
         }
         public ActionResult ResetPassword(string Id,bool EmailRedirected)
         {
-            MCTSPWebLoginCredentials ResetPassUser = new MCTSPWebLoginCredentials();
+            MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials ResetPassUser = new MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials();
 
             if (!EmailRedirected)
             {
@@ -99,7 +99,7 @@ namespace MCT_TimeSheetsApp.Controllers
             NewPasswordResponseModel response = new NewPasswordResponseModel();
             try
             {
-                MCTSPWebLoginCredentials NewPassUser = mCT_WLCService.GetById(model.UserCode);
+                MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials NewPassUser = mCT_WLCService.GetById(model.UserCode);
                 NewPassUser.Password = model.NewPassword;
                 NewPassUser.ChangePassword = 0;
                 mCT_WLCService.Update(NewPassUser);
@@ -126,7 +126,7 @@ namespace MCT_TimeSheetsApp.Controllers
         {
             NewPasswordResponseModel response = new NewPasswordResponseModel();
             MCT_WLCService loginService = new MCT_WLCService();
-            MCTSPWebLoginCredentials passResetUser = loginService.GetByUsername(model.Username);
+            MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials passResetUser = loginService.GetByUsername(model.Username);
             EmailSenderEngine emailSenderEngine = new EmailSenderEngine();
 
             if (passResetUser!=null)
@@ -137,9 +137,10 @@ namespace MCT_TimeSheetsApp.Controllers
                     loginService.Update(passResetUser);
                 }
 
-                Resource passResetResource = new ResourceService().GetById(passResetUser.ResourceNo);
-                MCTTimeSheetAppSetup setup = new MCTTimeSheetAppSetupService().Get();
-                if (emailSenderEngine.SendPasswordResetEmail(passResetResource, setup,passResetUser))
+                MCT_Teknoloji_A_Ş__Resource defaultResource = new ResourceService().GetById(passResetUser.ResourceNo);
+                MCT_Teknoloji_A_Ş__Resource_Ext passResetResource = new ResourceExtService().GetById(passResetUser.ResourceNo);
+                MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup setup = new MCTTimeSheetAppSetupService().Get();
+                if (emailSenderEngine.SendPasswordResetEmail(passResetResource, setup,passResetUser,defaultResource))
                 {
                     response.RedirectUrl = "/Login/Login";
                     response.State = true;

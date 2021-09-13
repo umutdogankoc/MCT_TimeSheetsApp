@@ -7,6 +7,6 @@ namespace MCT_TimeSheetsApp.Models.Update
 {
     public class UpdateResourceTimeSheetResponseModel:BaseResponseModel
     {
-
+        public int UpdatedLineCount { get; set; }
     }
 }

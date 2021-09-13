@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="lkJB8KRXZ/oc3xV8h1T4MB3+Z59M+Opsgsbsg7rF0TQ=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="as7/NA0xjO8I3STpIH+05nyGD7WfAoAKmRqBDkc9vQ0=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="TimeSheetAppWebService_Binding">
+    <bindingConfiguration bindingType="basicHttpBinding" name="UDKTimeSheetWS_Binding">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>TimeSheetAppWebService_Binding</serializedValue>
+          <serializedValue>UDKTimeSheetWS_Binding</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="TimeSheetAppWebService_Port" contract="TimeSheetWS.TimeSheetAppWebService_Port" bindingType="basicHttpBinding" address="http://udk-dev:7047/BC160/WS/CRONUS International Ltd./Codeunit/TimeSheetAppWebService" bindingConfiguration="TimeSheetAppWebService_Binding">
+    <endpoint name="UDKTimeSheetWS_Port" contract="TimeSheetWS.UDKTimeSheetWS_Port" bindingType="basicHttpBinding" address="http://udk-dev:7062/MCT/WS/MCT Teknoloji A.Ş./Codeunit/UDKTimeSheetWS" bindingConfiguration="UDKTimeSheetWS_Binding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://udk-dev:7047/BC160/WS/CRONUS%20International%20Ltd./Codeunit/TimeSheetAppWebService</serializedValue>
+          <serializedValue>http://udk-dev:7062/MCT/WS/MCT%20Teknoloji%20A.%C5%9E./Codeunit/UDKTimeSheetWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -124,10 +124,10 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>TimeSheetAppWebService_Binding</serializedValue>
+          <serializedValue>UDKTimeSheetWS_Binding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>TimeSheetWS.TimeSheetAppWebService_Port</serializedValue>
+          <serializedValue>TimeSheetWS.UDKTimeSheetWS_Port</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>TimeSheetAppWebService_Port</serializedValue>
+          <serializedValue>UDKTimeSheetWS_Port</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

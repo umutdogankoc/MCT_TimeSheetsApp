@@ -6,27 +6,25 @@ using System.Threading.Tasks;
 using DataAccessLayer;
 
 namespace ServiceLayer.Base
-{
-    public class BaseService
+{    public class BaseServiceLive
     {
-        public BaseService()
+        public BaseServiceLive()
         {
             if (db==null)
             {
-                db = new MCT_Entities();
+                db = new mct2016Entities();
             }
         }
 
-        private MCT_Entities db;
+        private mct2016Entities db;
 
-        public MCT_Entities Database
+        public mct2016Entities Database
         {
-            get 
+            get
             {
                 return db;
             }
-
-            set 
+            set
             {
                 db = value;
             }

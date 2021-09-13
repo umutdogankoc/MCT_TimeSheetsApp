@@ -12,7 +12,7 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Resource
+    public partial class MCT_Teknoloji_A_Ş__Resource
     {
         public byte[] timestamp { get; set; }
         public string No_ { get; set; }
@@ -51,13 +51,13 @@ namespace DataAccessLayer
         public string VAT_Prod__Posting_Group { get; set; }
         public string Country_Region_Code { get; set; }
         public string IC_Partner_Purch__G_L_Acc__No_ { get; set; }
-        public System.Guid Image { get; set; }
-        public byte Privacy_Blocked { get; set; }
         public byte Use_Time_Sheet { get; set; }
         public string Time_Sheet_Owner_User_ID { get; set; }
         public string Time_Sheet_Approver_User_ID { get; set; }
         public string Default_Deferral_Template_Code { get; set; }
         public string Service_Zone_Filter { get; set; }
+        public System.Guid Image { get; set; }
+        public byte Privacy_Blocked { get; set; }
         public System.Guid C_systemId { get; set; }
     }
 }

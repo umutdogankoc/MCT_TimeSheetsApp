@@ -1,0 +1,1324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="mct2016Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MCT Teknoloji A_Ş_$Job Planning Line$10df6b45-de10-4e69-bd6a-d5f2aed6357a">
+          <Key>
+            <PropertyRef Name="Job No_" />
+            <PropertyRef Name="Job Task No_" />
+            <PropertyRef Name="Line No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Job No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Task No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Line No_" Type="int" Nullable="false" />
+          <Property Name="Phase Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Total Cost (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Total Price (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Tentative" Type="tinyint" Nullable="false" />
+          <Property Name="Unknown Date" Type="tinyint" Nullable="false" />
+          <Property Name="Start Time" Type="datetime" Nullable="false" />
+          <Property Name="Consultant Claim" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Invoice Amount (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Invoiced Amount (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Posted Amount (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Remaining Amount (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Status" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Alliance" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PO Mail Sent" Type="tinyint" Nullable="false" />
+          <Property Name="Resource Alternative-1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Resource Alternative-2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="LastModified" Type="datetime" Nullable="false" />
+          <Property Name="LastModifiedTime" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Calendar Event Id" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Update Calendar" Type="tinyint" Nullable="false" />
+          <Property Name="Calendar Event Id Found" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Entry No_" Type="int" Nullable="false" />
+          <Property Name="Prepaid" Type="tinyint" Nullable="false" />
+          <Property Name="EUR" Type="tinyint" Nullable="false" />
+          <Property Name="Consultant Claim Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Training Code" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Job Planning Line$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="Job No_" />
+            <PropertyRef Name="Job Task No_" />
+            <PropertyRef Name="Line No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Job No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Task No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Line No_" Type="int" Nullable="false" />
+          <Property Name="Planning Date" Type="datetime" Nullable="false" />
+          <Property Name="Document No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Direct Unit Cost (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Cost (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Total Cost (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Price (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Total Price (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Resource Group No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Unit of Measure Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Location Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Last Date Modified" Type="datetime" Nullable="false" />
+          <Property Name="User ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Work Type Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Customer Price Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Country_Region Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Gen_ Bus_ Posting Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Gen_ Prod_ Posting Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Document Date" Type="datetime" Nullable="false" />
+          <Property Name="Line Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Total Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Price" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Total Price" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Line Discount Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Line Discount Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Cost Factor" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Serial No_" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lot No_" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Line Discount _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Line Type" Type="int" Nullable="false" />
+          <Property Name="Currency Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Currency Date" Type="datetime" Nullable="false" />
+          <Property Name="Currency Factor" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Schedule Line" Type="tinyint" Nullable="false" />
+          <Property Name="Contract Line" Type="tinyint" Nullable="false" />
+          <Property Name="Job Contract Entry No_" Type="int" Nullable="false" />
+          <Property Name="VAT Unit Price" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="VAT Line Discount Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="VAT Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="VAT _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Description 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Job Ledger Entry No_" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Ledger Entry Type" Type="int" Nullable="false" />
+          <Property Name="Ledger Entry No_" Type="int" Nullable="false" />
+          <Property Name="System-Created Entry" Type="tinyint" Nullable="false" />
+          <Property Name="Usage Link" Type="tinyint" Nullable="false" />
+          <Property Name="Remaining Qty_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Remaining Qty_ (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Remaining Total Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Remaining Total Cost (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Remaining Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Remaining Line Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ Posted" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ to Transfer to Journal" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Posted Total Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Posted Total Cost (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Posted Line Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Posted Line Amount (LCY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ to Transfer to Invoice" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Qty_ to Invoice" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Reserve" Type="int" Nullable="false" />
+          <Property Name="Planned" Type="tinyint" Nullable="false" />
+          <Property Name="Variant Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Bin Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Qty_ per Unit of Measure" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Quantity (Base)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Requested Delivery Date" Type="datetime" Nullable="false" />
+          <Property Name="Promised Delivery Date" Type="datetime" Nullable="false" />
+          <Property Name="Planned Delivery Date" Type="datetime" Nullable="false" />
+          <Property Name="Service Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Price Calculation Method" Type="int" Nullable="false" />
+          <Property Name="Cost Calculation Method" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Job Task$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="Job No_" />
+            <PropertyRef Name="Job Task No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Job No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Task No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Job Task Type" Type="int" Nullable="false" />
+          <Property Name="WIP-Total" Type="int" Nullable="false" />
+          <Property Name="Job Posting Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="WIP Method" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Totaling" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="New Page" Type="tinyint" Nullable="false" />
+          <Property Name="No_ of Blank Lines" Type="int" Nullable="false" />
+          <Property Name="Indentation" Type="int" Nullable="false" />
+          <Property Name="Recognized Sales Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Recognized Costs Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Recognized Sales G_L Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Recognized Costs G_L Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Global Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Global Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Job$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Search Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Bill-to Customer No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Creation Date" Type="datetime" Nullable="false" />
+          <Property Name="Starting Date" Type="datetime" Nullable="false" />
+          <Property Name="Ending Date" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Person Responsible" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Global Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Global Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Posting Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Blocked" Type="int" Nullable="false" />
+          <Property Name="Last Date Modified" Type="datetime" Nullable="false" />
+          <Property Name="Customer Disc_ Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Customer Price Group" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Language Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Picture" Type="image" />
+          <Property Name="Bill-to Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Bill-to Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Bill-to Address 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Bill-to City" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Bill-to County" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Bill-to Post Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="No_ Series" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Bill-to Country_Region Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Bill-to Name 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Reserve" Type="int" Nullable="false" />
+          <Property Name="Image" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="WIP Method" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Currency Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Bill-to Contact No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Bill-to Contact" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="WIP Posting Date" Type="datetime" Nullable="false" />
+          <Property Name="Invoice Currency Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Exch_ Calculation (Cost)" Type="int" Nullable="false" />
+          <Property Name="Exch_ Calculation (Price)" Type="int" Nullable="false" />
+          <Property Name="Allow Schedule_Contract Lines" Type="tinyint" Nullable="false" />
+          <Property Name="Complete" Type="tinyint" Nullable="false" />
+          <Property Name="Apply Usage Link" Type="tinyint" Nullable="false" />
+          <Property Name="WIP Posting Method" Type="int" Nullable="false" />
+          <Property Name="Over Budget" Type="tinyint" Nullable="false" />
+          <Property Name="Project Manager" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Price Calculation Method" Type="int" Nullable="false" />
+          <Property Name="Cost Calculation Method" Type="int" Nullable="false" />
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$MCTSPWebLoginCredentials$ba5f5175-a366-4e84-a812-534a9d57fc13">
+          <Key>
+            <PropertyRef Name="ResourceNo" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="ResourceNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MCTSPLoginPrimaryKey" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ChangePassword" Type="tinyint" Nullable="false" />
+          <Property Name="NoSeries" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="CreationTime" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$MCTTimeSheetAppSetup$ba5f5175-a366-4e84-a812-534a9d57fc13">
+          <Key>
+            <PropertyRef Name="MCTTimeSheetAppPrimaryKey" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="MCTTimeSheetAppPrimaryKey" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="MCTTimeSheetAppLoginNos" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MCTTimeSheetAppAdminEmail" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Resource$10df6b45-de10-4e69-bd6a-d5f2aed6357a">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="E-Mail" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="Direct Unit Cost (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Cost (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Price (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Mobile Phone No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Account Executive" Type="tinyint" Nullable="false" />
+          <Property Name="Trainer" Type="tinyint" Nullable="false" />
+          <Property Name="Daily Fee" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Annual Cost (ACY)" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Happy Sheet Average" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Net Promoting Score" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Happy Sheet Trainer" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job Type" Type="int" Nullable="false" />
+          <Property Name="Monthly Capacity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Web Username" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Web Password" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Timesheet User" Type="tinyint" Nullable="false" />
+          <Property Name="Dont Work on Saturday" Type="tinyint" Nullable="false" />
+          <Property Name="Dont Work on Sunday" Type="tinyint" Nullable="false" />
+          <Property Name="Dont Work on Monday" Type="tinyint" Nullable="false" />
+          <Property Name="Dont Work on Tuesday" Type="tinyint" Nullable="false" />
+          <Property Name="Dont Work on Wednesday" Type="tinyint" Nullable="false" />
+          <Property Name="Dont Work on Thursday" Type="tinyint" Nullable="false" />
+          <Property Name="Dont Work on Friday" Type="tinyint" Nullable="false" />
+          <Property Name="Update Calendar" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Resource$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Search Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Address 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Social Security No_" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Job Title" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Education" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Contract Class" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Employment Date" Type="datetime" Nullable="false" />
+          <Property Name="Resource Group No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Global Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Global Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Base Unit of Measure" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Direct Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Indirect Cost _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit Cost" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Profit _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Price_Profit Calculation" Type="int" Nullable="false" />
+          <Property Name="Unit Price" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Vendor No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last Date Modified" Type="datetime" Nullable="false" />
+          <Property Name="Blocked" Type="tinyint" Nullable="false" />
+          <Property Name="Gen_ Prod_ Posting Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Picture" Type="image" />
+          <Property Name="Post Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="County" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Automatic Ext_ Texts" Type="tinyint" Nullable="false" />
+          <Property Name="No_ Series" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tax Group Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="VAT Prod_ Posting Group" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Country_Region Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="IC Partner Purch_ G_L Acc_ No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Use Time Sheet" Type="tinyint" Nullable="false" />
+          <Property Name="Time Sheet Owner User ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Time Sheet Approver User ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Default Deferral Template Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Service Zone Filter" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Image" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Privacy Blocked" Type="tinyint" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Salesperson_Purchaser$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Commission _" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Image" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Privacy Blocked" Type="tinyint" Nullable="false" />
+          <Property Name="Global Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Global Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="E-Mail" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="Phone No_" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Job Title" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Search E-Mail" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="E-Mail 2" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Time Sheet Detail$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="Time Sheet No_" />
+            <PropertyRef Name="Time Sheet Line No_" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Time Sheet No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Time Sheet Line No_" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Resource No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Task No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Cause of Absence Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Service Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Service Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Posted Quantity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Assembly Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Assembly Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Posted" Type="tinyint" Nullable="false" />
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Last Modified DateTime" Type="datetime" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Dimension Set ID" Type="int" Nullable="false" />
+          <Property Name="Job Id" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Time Sheet Header$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Starting Date" Type="datetime" Nullable="false" />
+          <Property Name="Ending Date" Type="datetime" Nullable="false" />
+          <Property Name="Resource No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Owner User ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Approver User ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Time Sheet Line$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="Time Sheet No_" />
+            <PropertyRef Name="Line No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Time Sheet No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Line No_" Type="int" Nullable="false" />
+          <Property Name="Time Sheet Starting Date" Type="datetime" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Job No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Job Task No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Cause of Absence Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Work Type Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Approver ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Service Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Service Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Chargeable" Type="tinyint" Nullable="false" />
+          <Property Name="Assembly Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Assembly Order Line No_" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Approved By" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Approval Date" Type="datetime" Nullable="false" />
+          <Property Name="Posted" Type="tinyint" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Dimension Set ID" Type="int" Nullable="false" />
+          <Property Name="Job Id" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT Teknoloji A_Ş_$Work Type$437dbf0e-84ff-417a-965d-ed2bb9650972">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Unit of Measure Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="$systemId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="mct2016ModelStoreContainer">
+          <EntitySet Name="MCT Teknoloji A_Ş_$Job Planning Line$10df6b45-de10-4e69-bd6a-d5f2aed6357a" EntityType="Self.MCT Teknoloji A_Ş_$Job Planning Line$10df6b45-de10-4e69-bd6a-d5f2aed6357a" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Job Planning Line$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.MCT Teknoloji A_Ş_$Job Planning Line$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Job Task$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.MCT Teknoloji A_Ş_$Job Task$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Job$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.MCT Teknoloji A_Ş_$Job$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$MCTSPWebLoginCredentials$ba5f5175-a366-4e84-a812-534a9d57fc13" EntityType="Self.MCT Teknoloji A_Ş_$MCTSPWebLoginCredentials$ba5f5175-a366-4e84-a812-534a9d57fc13" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$MCTTimeSheetAppSetup$ba5f5175-a366-4e84-a812-534a9d57fc13" EntityType="Self.MCT Teknoloji A_Ş_$MCTTimeSheetAppSetup$ba5f5175-a366-4e84-a812-534a9d57fc13" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Resource$10df6b45-de10-4e69-bd6a-d5f2aed6357a" EntityType="Self.MCT Teknoloji A_Ş_$Resource$10df6b45-de10-4e69-bd6a-d5f2aed6357a" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Resource$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.MCT Teknoloji A_Ş_$Resource$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Salesperson_Purchaser$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.MCT Teknoloji A_Ş_$Salesperson_Purchaser$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Time Sheet Detail$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.MCT Teknoloji A_Ş_$Time Sheet Detail$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Time Sheet Header$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.MCT Teknoloji A_Ş_$Time Sheet Header$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Time Sheet Line$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.MCT Teknoloji A_Ş_$Time Sheet Line$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MCT Teknoloji A_Ş_$Work Type$437dbf0e-84ff-417a-965d-ed2bb9650972" EntityType="Self.MCT Teknoloji A_Ş_$Work Type$437dbf0e-84ff-417a-965d-ed2bb9650972" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mct2016Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials">
+          <Key>
+            <PropertyRef Name="ResourceNo" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ResourceNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MCTSPLoginPrimaryKey" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ChangePassword" Type="Byte" Nullable="false" />
+          <Property Name="NoSeries" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreationTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup">
+          <Key>
+            <PropertyRef Name="MCTTimeSheetAppPrimaryKey" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="MCTTimeSheetAppPrimaryKey" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MCTTimeSheetAppLoginNos" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MCTTimeSheetAppAdminEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Resource_Ext">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="E_Mail" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Direct_Unit_Cost__ACY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit_Cost__ACY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit_Price__ACY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Mobile_Phone_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Account_Executive" Type="Byte" Nullable="false" />
+          <Property Name="Trainer" Type="Byte" Nullable="false" />
+          <Property Name="Daily_Fee" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Annual_Cost__ACY_" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Happy_Sheet_Average" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Net_Promoting_Score" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Happy_Sheet_Trainer" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Job_Type" Type="Int32" Nullable="false" />
+          <Property Name="Monthly_Capacity" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Web_Username" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Web_Password" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Timesheet_User" Type="Byte" Nullable="false" />
+          <Property Name="Dont_Work_on_Saturday" Type="Byte" Nullable="false" />
+          <Property Name="Dont_Work_on_Sunday" Type="Byte" Nullable="false" />
+          <Property Name="Dont_Work_on_Monday" Type="Byte" Nullable="false" />
+          <Property Name="Dont_Work_on_Tuesday" Type="Byte" Nullable="false" />
+          <Property Name="Dont_Work_on_Wednesday" Type="Byte" Nullable="false" />
+          <Property Name="Dont_Work_on_Thursday" Type="Byte" Nullable="false" />
+          <Property Name="Dont_Work_on_Friday" Type="Byte" Nullable="false" />
+          <Property Name="Update_Calendar" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Resource">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Search_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Social_Security_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Education" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contract_Class" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employment_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Resource_Group_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Global_Dimension_1_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Global_Dimension_2_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Base_Unit_of_Measure" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Direct_Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Indirect_Cost__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Unit_Cost" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Profit__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Price_Profit_Calculation" Type="Int32" Nullable="false" />
+          <Property Name="Unit_Price" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Vendor_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last_Date_Modified" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Blocked" Type="Byte" Nullable="false" />
+          <Property Name="Gen__Prod__Posting_Group" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Post_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="County" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Automatic_Ext__Texts" Type="Byte" Nullable="false" />
+          <Property Name="No__Series" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tax_Group_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VAT_Prod__Posting_Group" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Country_Region_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IC_Partner_Purch__G_L_Acc__No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Use_Time_Sheet" Type="Byte" Nullable="false" />
+          <Property Name="Time_Sheet_Owner_User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Time_Sheet_Approver_User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Default_Deferral_Template_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Service_Zone_Filter" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Image" Type="Guid" Nullable="false" />
+          <Property Name="Privacy_Blocked" Type="Byte" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Salesperson_Purchaser">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Commission__" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Image" Type="Guid" Nullable="false" />
+          <Property Name="Privacy_Blocked" Type="Byte" Nullable="false" />
+          <Property Name="Global_Dimension_1_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Global_Dimension_2_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="E_Mail" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_Title" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Search_E_Mail" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="E_Mail_2" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Time_Sheet_Detai">
+          <Key>
+            <PropertyRef Name="Time_Sheet_No_" />
+            <PropertyRef Name="Time_Sheet_Line_No_" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Time_Sheet_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Time_Sheet_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Resource_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_Task_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cause_of_Absence_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Service_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Service_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Posted_Quantity" Type="Decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Assembly_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Assembly_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Posted" Type="Byte" Nullable="false" />
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Last_Modified_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+          <Property Name="Dimension_Set_ID" Type="Int32" Nullable="false" />
+          <Property Name="Job_Id" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Time_Sheet_Header">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Starting_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Ending_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Resource_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Owner_User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Approver_User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Time_Sheet_Line">
+          <Key>
+            <PropertyRef Name="Time_Sheet_No_" />
+            <PropertyRef Name="Line_No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Time_Sheet_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Time_Sheet_Starting_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Job_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Job_Task_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cause_of_Absence_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Work_Type_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Approver_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Service_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Service_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Chargeable" Type="Byte" Nullable="false" />
+          <Property Name="Assembly_Order_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Assembly_Order_Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Approved_By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Approval_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Posted" Type="Byte" Nullable="false" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+          <Property Name="Dimension_Set_ID" Type="Int32" Nullable="false" />
+          <Property Name="Job_Id" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="mct2016Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Resource_Ext" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Resource_Ext" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Resource" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Resource" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Salesperson_Purchaser" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Salesperson_Purchaser" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Time_Sheet_Detail" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Time_Sheet_Detai" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Time_Sheet_Header" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Time_Sheet_Header" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Time_Sheet_Line" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Time_Sheet_Line" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Job" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Job" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Job_Planning_Line_Ext" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Job_Planning_Line_Ext" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Job_Planning_Line" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Job_Planning_Line" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Job_Task" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Job_Task" />
+          <EntitySet Name="MCT_Teknoloji_A_Ş__Work_Type" EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Work_Type" />
+        </EntityContainer>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Job">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Search_Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description_2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_Customer_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Creation_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Starting_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Ending_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Person_Responsible" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Global_Dimension_1_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Global_Dimension_2_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Posting_Group" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Blocked" Type="Int32" Nullable="false" />
+          <Property Name="Last_Date_Modified" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Customer_Disc__Group" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Price_Group" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Language_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Bill_to_Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_Address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_Address_2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_City" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_County" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_Post_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="No__Series" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_Country_Region_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_Name_2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reserve" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="Guid" Nullable="false" />
+          <Property Name="WIP_Method" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Currency_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_Contact_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Bill_to_Contact" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="WIP_Posting_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Invoice_Currency_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Exch__Calculation__Cost_" Type="Int32" Nullable="false" />
+          <Property Name="Exch__Calculation__Price_" Type="Int32" Nullable="false" />
+          <Property Name="Allow_Schedule_Contract_Lines" Type="Byte" Nullable="false" />
+          <Property Name="Complete" Type="Byte" Nullable="false" />
+          <Property Name="Apply_Usage_Link" Type="Byte" Nullable="false" />
+          <Property Name="WIP_Posting_Method" Type="Int32" Nullable="false" />
+          <Property Name="Over_Budget" Type="Byte" Nullable="false" />
+          <Property Name="Project_Manager" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+          <Property Name="Price_Calculation_Method" Type="Int32" Nullable="false" />
+          <Property Name="Cost_Calculation_Method" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Job_Planning_Line_Ext">
+          <Key>
+            <PropertyRef Name="Job_No_" />
+            <PropertyRef Name="Job_Task_No_" />
+            <PropertyRef Name="Line_No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Job_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Task_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Phase_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Total_Cost__ACY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Total_Price__ACY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Tentative" Type="Byte" Nullable="false" />
+          <Property Name="Unknown_Date" Type="Byte" Nullable="false" />
+          <Property Name="Start_Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Consultant_Claim" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Invoice_Amount__ACY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Invoiced_Amount__ACY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Posted_Amount__ACY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Remaining_Amount__ACY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Job_Status" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Alliance" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PO_Mail_Sent" Type="Byte" Nullable="false" />
+          <Property Name="Resource_Alternative_1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Resource_Alternative_2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastModifiedTime" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Calendar_Event_Id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Update_Calendar" Type="Byte" Nullable="false" />
+          <Property Name="Calendar_Event_Id_Found" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Entry_No_" Type="Int32" Nullable="false" />
+          <Property Name="Prepaid" Type="Byte" Nullable="false" />
+          <Property Name="EUR" Type="Byte" Nullable="false" />
+          <Property Name="Consultant_Claim_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Training_Code" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Job_Planning_Line">
+          <Key>
+            <PropertyRef Name="Job_No_" />
+            <PropertyRef Name="Job_Task_No_" />
+            <PropertyRef Name="Line_No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Job_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Task_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Line_No_" Type="Int32" Nullable="false" />
+          <Property Name="Planning_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Document_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Direct_Unit_Cost__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Unit_Cost__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Total_Cost__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Unit_Price__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Total_Price__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Resource_Group_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_of_Measure_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Location_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Date_Modified" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="User_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Work_Type_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Price_Group" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Country_Region_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Gen__Bus__Posting_Group" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Gen__Prod__Posting_Group" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Document_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Line_Amount__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Unit_Cost" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Total_Cost" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Unit_Price" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Total_Price" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Line_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Line_Discount_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Line_Discount_Amount__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Cost_Factor" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Serial_No_" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Lot_No_" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Line_Discount__" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Line_Type" Type="Int32" Nullable="false" />
+          <Property Name="Currency_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Currency_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Currency_Factor" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Schedule_Line" Type="Byte" Nullable="false" />
+          <Property Name="Contract_Line" Type="Byte" Nullable="false" />
+          <Property Name="Job_Contract_Entry_No_" Type="Int32" Nullable="false" />
+          <Property Name="VAT_Unit_Price" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="VAT_Line_Discount_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="VAT_Line_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="VAT__" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Description_2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Ledger_Entry_No_" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Ledger_Entry_Type" Type="Int32" Nullable="false" />
+          <Property Name="Ledger_Entry_No_" Type="Int32" Nullable="false" />
+          <Property Name="System_Created_Entry" Type="Byte" Nullable="false" />
+          <Property Name="Usage_Link" Type="Byte" Nullable="false" />
+          <Property Name="Remaining_Qty_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Remaining_Qty___Base_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Remaining_Total_Cost" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Remaining_Total_Cost__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Remaining_Line_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Remaining_Line_Amount__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Qty__Posted" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Qty__to_Transfer_to_Journal" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Posted_Total_Cost" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Posted_Total_Cost__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Posted_Line_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Posted_Line_Amount__LCY_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Qty__to_Transfer_to_Invoice" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Qty__to_Invoice" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Reserve" Type="Int32" Nullable="false" />
+          <Property Name="Planned" Type="Byte" Nullable="false" />
+          <Property Name="Variant_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Bin_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Qty__per_Unit_of_Measure" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Quantity__Base_" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Requested_Delivery_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Promised_Delivery_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Planned_Delivery_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Service_Order_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+          <Property Name="Price_Calculation_Method" Type="Int32" Nullable="false" />
+          <Property Name="Cost_Calculation_Method" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Job_Task">
+          <Key>
+            <PropertyRef Name="Job_No_" />
+            <PropertyRef Name="Job_Task_No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Job_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Task_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Task_Type" Type="Int32" Nullable="false" />
+          <Property Name="WIP_Total" Type="Int32" Nullable="false" />
+          <Property Name="Job_Posting_Group" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WIP_Method" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Totaling" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="New_Page" Type="Byte" Nullable="false" />
+          <Property Name="No__of_Blank_Lines" Type="Int32" Nullable="false" />
+          <Property Name="Indentation" Type="Int32" Nullable="false" />
+          <Property Name="Recognized_Sales_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Recognized_Costs_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Recognized_Sales_G_L_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Recognized_Costs_G_L_Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Global_Dimension_1_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Global_Dimension_2_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MCT_Teknoloji_A_Ş__Work_Type">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_of_Measure_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="C_systemId" Type="Guid" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mct2016ModelStoreContainer" CdmEntityContainer="mct2016Entities">
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$MCTSPWebLoginCredentials$ba5f5175-a366-4e84-a812-534a9d57fc13">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="ResourceNo" ColumnName="ResourceNo" />
+                <ScalarProperty Name="MCTSPLoginPrimaryKey" ColumnName="MCTSPLoginPrimaryKey" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ChangePassword" ColumnName="ChangePassword" />
+                <ScalarProperty Name="NoSeries" ColumnName="NoSeries" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedTime" ColumnName="ModifiedTime" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$MCTTimeSheetAppSetup$ba5f5175-a366-4e84-a812-534a9d57fc13">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="MCTTimeSheetAppPrimaryKey" ColumnName="MCTTimeSheetAppPrimaryKey" />
+                <ScalarProperty Name="MCTTimeSheetAppLoginNos" ColumnName="MCTTimeSheetAppLoginNos" />
+                <ScalarProperty Name="MCTTimeSheetAppAdminEmail" ColumnName="MCTTimeSheetAppAdminEmail" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Resource_Ext">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Resource_Ext">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Resource$10df6b45-de10-4e69-bd6a-d5f2aed6357a">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="Direct_Unit_Cost__ACY_" ColumnName="Direct Unit Cost (ACY)" />
+                <ScalarProperty Name="Unit_Cost__ACY_" ColumnName="Unit Cost (ACY)" />
+                <ScalarProperty Name="Unit_Price__ACY_" ColumnName="Unit Price (ACY)" />
+                <ScalarProperty Name="Mobile_Phone_No_" ColumnName="Mobile Phone No_" />
+                <ScalarProperty Name="Account_Executive" ColumnName="Account Executive" />
+                <ScalarProperty Name="Trainer" ColumnName="Trainer" />
+                <ScalarProperty Name="Daily_Fee" ColumnName="Daily Fee" />
+                <ScalarProperty Name="Annual_Cost__ACY_" ColumnName="Annual Cost (ACY)" />
+                <ScalarProperty Name="Happy_Sheet_Average" ColumnName="Happy Sheet Average" />
+                <ScalarProperty Name="Net_Promoting_Score" ColumnName="Net Promoting Score" />
+                <ScalarProperty Name="Happy_Sheet_Trainer" ColumnName="Happy Sheet Trainer" />
+                <ScalarProperty Name="Job_Type" ColumnName="Job Type" />
+                <ScalarProperty Name="Monthly_Capacity" ColumnName="Monthly Capacity" />
+                <ScalarProperty Name="Web_Username" ColumnName="Web Username" />
+                <ScalarProperty Name="Web_Password" ColumnName="Web Password" />
+                <ScalarProperty Name="Timesheet_User" ColumnName="Timesheet User" />
+                <ScalarProperty Name="Dont_Work_on_Saturday" ColumnName="Dont Work on Saturday" />
+                <ScalarProperty Name="Dont_Work_on_Sunday" ColumnName="Dont Work on Sunday" />
+                <ScalarProperty Name="Dont_Work_on_Monday" ColumnName="Dont Work on Monday" />
+                <ScalarProperty Name="Dont_Work_on_Tuesday" ColumnName="Dont Work on Tuesday" />
+                <ScalarProperty Name="Dont_Work_on_Wednesday" ColumnName="Dont Work on Wednesday" />
+                <ScalarProperty Name="Dont_Work_on_Thursday" ColumnName="Dont Work on Thursday" />
+                <ScalarProperty Name="Dont_Work_on_Friday" ColumnName="Dont Work on Friday" />
+                <ScalarProperty Name="Update_Calendar" ColumnName="Update Calendar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Resource">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Resource">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Resource$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Search_Name" ColumnName="Search Name" />
+                <ScalarProperty Name="Name_2" ColumnName="Name 2" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Address_2" ColumnName="Address 2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Social_Security_No_" ColumnName="Social Security No_" />
+                <ScalarProperty Name="Job_Title" ColumnName="Job Title" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Contract_Class" ColumnName="Contract Class" />
+                <ScalarProperty Name="Employment_Date" ColumnName="Employment Date" />
+                <ScalarProperty Name="Resource_Group_No_" ColumnName="Resource Group No_" />
+                <ScalarProperty Name="Global_Dimension_1_Code" ColumnName="Global Dimension 1 Code" />
+                <ScalarProperty Name="Global_Dimension_2_Code" ColumnName="Global Dimension 2 Code" />
+                <ScalarProperty Name="Base_Unit_of_Measure" ColumnName="Base Unit of Measure" />
+                <ScalarProperty Name="Direct_Unit_Cost" ColumnName="Direct Unit Cost" />
+                <ScalarProperty Name="Indirect_Cost__" ColumnName="Indirect Cost _" />
+                <ScalarProperty Name="Unit_Cost" ColumnName="Unit Cost" />
+                <ScalarProperty Name="Profit__" ColumnName="Profit _" />
+                <ScalarProperty Name="Price_Profit_Calculation" ColumnName="Price_Profit Calculation" />
+                <ScalarProperty Name="Unit_Price" ColumnName="Unit Price" />
+                <ScalarProperty Name="Vendor_No_" ColumnName="Vendor No_" />
+                <ScalarProperty Name="Last_Date_Modified" ColumnName="Last Date Modified" />
+                <ScalarProperty Name="Blocked" ColumnName="Blocked" />
+                <ScalarProperty Name="Gen__Prod__Posting_Group" ColumnName="Gen_ Prod_ Posting Group" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Automatic_Ext__Texts" ColumnName="Automatic Ext_ Texts" />
+                <ScalarProperty Name="No__Series" ColumnName="No_ Series" />
+                <ScalarProperty Name="Tax_Group_Code" ColumnName="Tax Group Code" />
+                <ScalarProperty Name="VAT_Prod__Posting_Group" ColumnName="VAT Prod_ Posting Group" />
+                <ScalarProperty Name="Country_Region_Code" ColumnName="Country_Region Code" />
+                <ScalarProperty Name="IC_Partner_Purch__G_L_Acc__No_" ColumnName="IC Partner Purch_ G_L Acc_ No_" />
+                <ScalarProperty Name="Use_Time_Sheet" ColumnName="Use Time Sheet" />
+                <ScalarProperty Name="Time_Sheet_Owner_User_ID" ColumnName="Time Sheet Owner User ID" />
+                <ScalarProperty Name="Time_Sheet_Approver_User_ID" ColumnName="Time Sheet Approver User ID" />
+                <ScalarProperty Name="Default_Deferral_Template_Code" ColumnName="Default Deferral Template Code" />
+                <ScalarProperty Name="Service_Zone_Filter" ColumnName="Service Zone Filter" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Privacy_Blocked" ColumnName="Privacy Blocked" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Salesperson_Purchaser">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Salesperson_Purchaser">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Salesperson_Purchaser$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Commission__" ColumnName="Commission _" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Privacy_Blocked" ColumnName="Privacy Blocked" />
+                <ScalarProperty Name="Global_Dimension_1_Code" ColumnName="Global Dimension 1 Code" />
+                <ScalarProperty Name="Global_Dimension_2_Code" ColumnName="Global Dimension 2 Code" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="Phone_No_" ColumnName="Phone No_" />
+                <ScalarProperty Name="Job_Title" ColumnName="Job Title" />
+                <ScalarProperty Name="Search_E_Mail" ColumnName="Search E-Mail" />
+                <ScalarProperty Name="E_Mail_2" ColumnName="E-Mail 2" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Time_Sheet_Detail">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Time_Sheet_Detai">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Time Sheet Detail$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="Time_Sheet_No_" ColumnName="Time Sheet No_" />
+                <ScalarProperty Name="Time_Sheet_Line_No_" ColumnName="Time Sheet Line No_" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Resource_No_" ColumnName="Resource No_" />
+                <ScalarProperty Name="Job_No_" ColumnName="Job No_" />
+                <ScalarProperty Name="Job_Task_No_" ColumnName="Job Task No_" />
+                <ScalarProperty Name="Cause_of_Absence_Code" ColumnName="Cause of Absence Code" />
+                <ScalarProperty Name="Service_Order_No_" ColumnName="Service Order No_" />
+                <ScalarProperty Name="Service_Order_Line_No_" ColumnName="Service Order Line No_" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Posted_Quantity" ColumnName="Posted Quantity" />
+                <ScalarProperty Name="Assembly_Order_No_" ColumnName="Assembly Order No_" />
+                <ScalarProperty Name="Assembly_Order_Line_No_" ColumnName="Assembly Order Line No_" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Last_Modified_DateTime" ColumnName="Last Modified DateTime" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+                <ScalarProperty Name="Dimension_Set_ID" ColumnName="Dimension Set ID" />
+                <ScalarProperty Name="Job_Id" ColumnName="Job Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Time_Sheet_Header">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Time_Sheet_Header">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Time Sheet Header$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="Starting_Date" ColumnName="Starting Date" />
+                <ScalarProperty Name="Ending_Date" ColumnName="Ending Date" />
+                <ScalarProperty Name="Resource_No_" ColumnName="Resource No_" />
+                <ScalarProperty Name="Owner_User_ID" ColumnName="Owner User ID" />
+                <ScalarProperty Name="Approver_User_ID" ColumnName="Approver User ID" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Time_Sheet_Line">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Time_Sheet_Line">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Time Sheet Line$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="Time_Sheet_No_" ColumnName="Time Sheet No_" />
+                <ScalarProperty Name="Line_No_" ColumnName="Line No_" />
+                <ScalarProperty Name="Time_Sheet_Starting_Date" ColumnName="Time Sheet Starting Date" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Job_No_" ColumnName="Job No_" />
+                <ScalarProperty Name="Job_Task_No_" ColumnName="Job Task No_" />
+                <ScalarProperty Name="Cause_of_Absence_Code" ColumnName="Cause of Absence Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Work_Type_Code" ColumnName="Work Type Code" />
+                <ScalarProperty Name="Approver_ID" ColumnName="Approver ID" />
+                <ScalarProperty Name="Service_Order_No_" ColumnName="Service Order No_" />
+                <ScalarProperty Name="Service_Order_Line_No_" ColumnName="Service Order Line No_" />
+                <ScalarProperty Name="Chargeable" ColumnName="Chargeable" />
+                <ScalarProperty Name="Assembly_Order_No_" ColumnName="Assembly Order No_" />
+                <ScalarProperty Name="Assembly_Order_Line_No_" ColumnName="Assembly Order Line No_" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Approved_By" ColumnName="Approved By" />
+                <ScalarProperty Name="Approval_Date" ColumnName="Approval Date" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+                <ScalarProperty Name="Dimension_Set_ID" ColumnName="Dimension Set ID" />
+                <ScalarProperty Name="Job_Id" ColumnName="Job Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Job">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Job">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Job$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Cost_Calculation_Method" ColumnName="Cost Calculation Method" />
+                <ScalarProperty Name="Price_Calculation_Method" ColumnName="Price Calculation Method" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+                <ScalarProperty Name="Project_Manager" ColumnName="Project Manager" />
+                <ScalarProperty Name="Over_Budget" ColumnName="Over Budget" />
+                <ScalarProperty Name="WIP_Posting_Method" ColumnName="WIP Posting Method" />
+                <ScalarProperty Name="Apply_Usage_Link" ColumnName="Apply Usage Link" />
+                <ScalarProperty Name="Complete" ColumnName="Complete" />
+                <ScalarProperty Name="Allow_Schedule_Contract_Lines" ColumnName="Allow Schedule_Contract Lines" />
+                <ScalarProperty Name="Exch__Calculation__Price_" ColumnName="Exch_ Calculation (Price)" />
+                <ScalarProperty Name="Exch__Calculation__Cost_" ColumnName="Exch_ Calculation (Cost)" />
+                <ScalarProperty Name="Invoice_Currency_Code" ColumnName="Invoice Currency Code" />
+                <ScalarProperty Name="WIP_Posting_Date" ColumnName="WIP Posting Date" />
+                <ScalarProperty Name="Bill_to_Contact" ColumnName="Bill-to Contact" />
+                <ScalarProperty Name="Bill_to_Contact_No_" ColumnName="Bill-to Contact No_" />
+                <ScalarProperty Name="Currency_Code" ColumnName="Currency Code" />
+                <ScalarProperty Name="WIP_Method" ColumnName="WIP Method" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Reserve" ColumnName="Reserve" />
+                <ScalarProperty Name="Bill_to_Name_2" ColumnName="Bill-to Name 2" />
+                <ScalarProperty Name="Bill_to_Country_Region_Code" ColumnName="Bill-to Country_Region Code" />
+                <ScalarProperty Name="No__Series" ColumnName="No_ Series" />
+                <ScalarProperty Name="Bill_to_Post_Code" ColumnName="Bill-to Post Code" />
+                <ScalarProperty Name="Bill_to_County" ColumnName="Bill-to County" />
+                <ScalarProperty Name="Bill_to_City" ColumnName="Bill-to City" />
+                <ScalarProperty Name="Bill_to_Address_2" ColumnName="Bill-to Address 2" />
+                <ScalarProperty Name="Bill_to_Address" ColumnName="Bill-to Address" />
+                <ScalarProperty Name="Bill_to_Name" ColumnName="Bill-to Name" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Language_Code" ColumnName="Language Code" />
+                <ScalarProperty Name="Customer_Price_Group" ColumnName="Customer Price Group" />
+                <ScalarProperty Name="Customer_Disc__Group" ColumnName="Customer Disc_ Group" />
+                <ScalarProperty Name="Last_Date_Modified" ColumnName="Last Date Modified" />
+                <ScalarProperty Name="Blocked" ColumnName="Blocked" />
+                <ScalarProperty Name="Job_Posting_Group" ColumnName="Job Posting Group" />
+                <ScalarProperty Name="Global_Dimension_2_Code" ColumnName="Global Dimension 2 Code" />
+                <ScalarProperty Name="Global_Dimension_1_Code" ColumnName="Global Dimension 1 Code" />
+                <ScalarProperty Name="Person_Responsible" ColumnName="Person Responsible" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Ending_Date" ColumnName="Ending Date" />
+                <ScalarProperty Name="Starting_Date" ColumnName="Starting Date" />
+                <ScalarProperty Name="Creation_Date" ColumnName="Creation Date" />
+                <ScalarProperty Name="Bill_to_Customer_No_" ColumnName="Bill-to Customer No_" />
+                <ScalarProperty Name="Description_2" ColumnName="Description 2" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Search_Description" ColumnName="Search Description" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Job_Planning_Line_Ext">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Job_Planning_Line_Ext">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Job Planning Line$10df6b45-de10-4e69-bd6a-d5f2aed6357a">
+                <ScalarProperty Name="Training_Code" ColumnName="Training Code" />
+                <ScalarProperty Name="Consultant_Claim_Amount" ColumnName="Consultant Claim Amount" />
+                <ScalarProperty Name="EUR" ColumnName="EUR" />
+                <ScalarProperty Name="Prepaid" ColumnName="Prepaid" />
+                <ScalarProperty Name="Entry_No_" ColumnName="Entry No_" />
+                <ScalarProperty Name="Calendar_Event_Id_Found" ColumnName="Calendar Event Id Found" />
+                <ScalarProperty Name="Update_Calendar" ColumnName="Update Calendar" />
+                <ScalarProperty Name="Calendar_Event_Id" ColumnName="Calendar Event Id" />
+                <ScalarProperty Name="LastModifiedTime" ColumnName="LastModifiedTime" />
+                <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="Resource_Alternative_2" ColumnName="Resource Alternative-2" />
+                <ScalarProperty Name="Resource_Alternative_1" ColumnName="Resource Alternative-1" />
+                <ScalarProperty Name="PO_Mail_Sent" ColumnName="PO Mail Sent" />
+                <ScalarProperty Name="Alliance" ColumnName="Alliance" />
+                <ScalarProperty Name="Job_Status" ColumnName="Job Status" />
+                <ScalarProperty Name="Remaining_Amount__ACY_" ColumnName="Remaining Amount (ACY)" />
+                <ScalarProperty Name="Posted_Amount__ACY_" ColumnName="Posted Amount (ACY)" />
+                <ScalarProperty Name="Invoiced_Amount__ACY_" ColumnName="Invoiced Amount (ACY)" />
+                <ScalarProperty Name="Invoice_Amount__ACY_" ColumnName="Invoice Amount (ACY)" />
+                <ScalarProperty Name="Consultant_Claim" ColumnName="Consultant Claim" />
+                <ScalarProperty Name="Start_Time" ColumnName="Start Time" />
+                <ScalarProperty Name="Unknown_Date" ColumnName="Unknown Date" />
+                <ScalarProperty Name="Tentative" ColumnName="Tentative" />
+                <ScalarProperty Name="Total_Price__ACY_" ColumnName="Total Price (ACY)" />
+                <ScalarProperty Name="Total_Cost__ACY_" ColumnName="Total Cost (ACY)" />
+                <ScalarProperty Name="Phase_Code" ColumnName="Phase Code" />
+                <ScalarProperty Name="Line_No_" ColumnName="Line No_" />
+                <ScalarProperty Name="Job_Task_No_" ColumnName="Job Task No_" />
+                <ScalarProperty Name="Job_No_" ColumnName="Job No_" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Job_Planning_Line">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Job_Planning_Line">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Job Planning Line$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="Cost_Calculation_Method" ColumnName="Cost Calculation Method" />
+                <ScalarProperty Name="Price_Calculation_Method" ColumnName="Price Calculation Method" />
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+                <ScalarProperty Name="Service_Order_No_" ColumnName="Service Order No_" />
+                <ScalarProperty Name="Planned_Delivery_Date" ColumnName="Planned Delivery Date" />
+                <ScalarProperty Name="Promised_Delivery_Date" ColumnName="Promised Delivery Date" />
+                <ScalarProperty Name="Requested_Delivery_Date" ColumnName="Requested Delivery Date" />
+                <ScalarProperty Name="Quantity__Base_" ColumnName="Quantity (Base)" />
+                <ScalarProperty Name="Qty__per_Unit_of_Measure" ColumnName="Qty_ per Unit of Measure" />
+                <ScalarProperty Name="Bin_Code" ColumnName="Bin Code" />
+                <ScalarProperty Name="Variant_Code" ColumnName="Variant Code" />
+                <ScalarProperty Name="Planned" ColumnName="Planned" />
+                <ScalarProperty Name="Reserve" ColumnName="Reserve" />
+                <ScalarProperty Name="Qty__to_Invoice" ColumnName="Qty_ to Invoice" />
+                <ScalarProperty Name="Qty__to_Transfer_to_Invoice" ColumnName="Qty_ to Transfer to Invoice" />
+                <ScalarProperty Name="Posted_Line_Amount__LCY_" ColumnName="Posted Line Amount (LCY)" />
+                <ScalarProperty Name="Posted_Line_Amount" ColumnName="Posted Line Amount" />
+                <ScalarProperty Name="Posted_Total_Cost__LCY_" ColumnName="Posted Total Cost (LCY)" />
+                <ScalarProperty Name="Posted_Total_Cost" ColumnName="Posted Total Cost" />
+                <ScalarProperty Name="Qty__to_Transfer_to_Journal" ColumnName="Qty_ to Transfer to Journal" />
+                <ScalarProperty Name="Qty__Posted" ColumnName="Qty_ Posted" />
+                <ScalarProperty Name="Remaining_Line_Amount__LCY_" ColumnName="Remaining Line Amount (LCY)" />
+                <ScalarProperty Name="Remaining_Line_Amount" ColumnName="Remaining Line Amount" />
+                <ScalarProperty Name="Remaining_Total_Cost__LCY_" ColumnName="Remaining Total Cost (LCY)" />
+                <ScalarProperty Name="Remaining_Total_Cost" ColumnName="Remaining Total Cost" />
+                <ScalarProperty Name="Remaining_Qty___Base_" ColumnName="Remaining Qty_ (Base)" />
+                <ScalarProperty Name="Remaining_Qty_" ColumnName="Remaining Qty_" />
+                <ScalarProperty Name="Usage_Link" ColumnName="Usage Link" />
+                <ScalarProperty Name="System_Created_Entry" ColumnName="System-Created Entry" />
+                <ScalarProperty Name="Ledger_Entry_No_" ColumnName="Ledger Entry No_" />
+                <ScalarProperty Name="Ledger_Entry_Type" ColumnName="Ledger Entry Type" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Job_Ledger_Entry_No_" ColumnName="Job Ledger Entry No_" />
+                <ScalarProperty Name="Description_2" ColumnName="Description 2" />
+                <ScalarProperty Name="VAT__" ColumnName="VAT _" />
+                <ScalarProperty Name="VAT_Line_Amount" ColumnName="VAT Line Amount" />
+                <ScalarProperty Name="VAT_Line_Discount_Amount" ColumnName="VAT Line Discount Amount" />
+                <ScalarProperty Name="VAT_Unit_Price" ColumnName="VAT Unit Price" />
+                <ScalarProperty Name="Job_Contract_Entry_No_" ColumnName="Job Contract Entry No_" />
+                <ScalarProperty Name="Contract_Line" ColumnName="Contract Line" />
+                <ScalarProperty Name="Schedule_Line" ColumnName="Schedule Line" />
+                <ScalarProperty Name="Currency_Factor" ColumnName="Currency Factor" />
+                <ScalarProperty Name="Currency_Date" ColumnName="Currency Date" />
+                <ScalarProperty Name="Currency_Code" ColumnName="Currency Code" />
+                <ScalarProperty Name="Line_Type" ColumnName="Line Type" />
+                <ScalarProperty Name="Line_Discount__" ColumnName="Line Discount _" />
+                <ScalarProperty Name="Lot_No_" ColumnName="Lot No_" />
+                <ScalarProperty Name="Serial_No_" ColumnName="Serial No_" />
+                <ScalarProperty Name="Cost_Factor" ColumnName="Cost Factor" />
+                <ScalarProperty Name="Line_Discount_Amount__LCY_" ColumnName="Line Discount Amount (LCY)" />
+                <ScalarProperty Name="Line_Discount_Amount" ColumnName="Line Discount Amount" />
+                <ScalarProperty Name="Line_Amount" ColumnName="Line Amount" />
+                <ScalarProperty Name="Total_Price" ColumnName="Total Price" />
+                <ScalarProperty Name="Unit_Price" ColumnName="Unit Price" />
+                <ScalarProperty Name="Total_Cost" ColumnName="Total Cost" />
+                <ScalarProperty Name="Unit_Cost" ColumnName="Unit Cost" />
+                <ScalarProperty Name="Line_Amount__LCY_" ColumnName="Line Amount (LCY)" />
+                <ScalarProperty Name="Document_Date" ColumnName="Document Date" />
+                <ScalarProperty Name="Gen__Prod__Posting_Group" ColumnName="Gen_ Prod_ Posting Group" />
+                <ScalarProperty Name="Gen__Bus__Posting_Group" ColumnName="Gen_ Bus_ Posting Group" />
+                <ScalarProperty Name="Country_Region_Code" ColumnName="Country_Region Code" />
+                <ScalarProperty Name="Customer_Price_Group" ColumnName="Customer Price Group" />
+                <ScalarProperty Name="Work_Type_Code" ColumnName="Work Type Code" />
+                <ScalarProperty Name="User_ID" ColumnName="User ID" />
+                <ScalarProperty Name="Last_Date_Modified" ColumnName="Last Date Modified" />
+                <ScalarProperty Name="Location_Code" ColumnName="Location Code" />
+                <ScalarProperty Name="Unit_of_Measure_Code" ColumnName="Unit of Measure Code" />
+                <ScalarProperty Name="Resource_Group_No_" ColumnName="Resource Group No_" />
+                <ScalarProperty Name="Total_Price__LCY_" ColumnName="Total Price (LCY)" />
+                <ScalarProperty Name="Unit_Price__LCY_" ColumnName="Unit Price (LCY)" />
+                <ScalarProperty Name="Total_Cost__LCY_" ColumnName="Total Cost (LCY)" />
+                <ScalarProperty Name="Unit_Cost__LCY_" ColumnName="Unit Cost (LCY)" />
+                <ScalarProperty Name="Direct_Unit_Cost__LCY_" ColumnName="Direct Unit Cost (LCY)" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Document_No_" ColumnName="Document No_" />
+                <ScalarProperty Name="Planning_Date" ColumnName="Planning Date" />
+                <ScalarProperty Name="Line_No_" ColumnName="Line No_" />
+                <ScalarProperty Name="Job_Task_No_" ColumnName="Job Task No_" />
+                <ScalarProperty Name="Job_No_" ColumnName="Job No_" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Job_Task">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Job_Task">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Job Task$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+                <ScalarProperty Name="Global_Dimension_2_Code" ColumnName="Global Dimension 2 Code" />
+                <ScalarProperty Name="Global_Dimension_1_Code" ColumnName="Global Dimension 1 Code" />
+                <ScalarProperty Name="Recognized_Costs_G_L_Amount" ColumnName="Recognized Costs G_L Amount" />
+                <ScalarProperty Name="Recognized_Sales_G_L_Amount" ColumnName="Recognized Sales G_L Amount" />
+                <ScalarProperty Name="Recognized_Costs_Amount" ColumnName="Recognized Costs Amount" />
+                <ScalarProperty Name="Recognized_Sales_Amount" ColumnName="Recognized Sales Amount" />
+                <ScalarProperty Name="Indentation" ColumnName="Indentation" />
+                <ScalarProperty Name="No__of_Blank_Lines" ColumnName="No_ of Blank Lines" />
+                <ScalarProperty Name="New_Page" ColumnName="New Page" />
+                <ScalarProperty Name="Totaling" ColumnName="Totaling" />
+                <ScalarProperty Name="WIP_Method" ColumnName="WIP Method" />
+                <ScalarProperty Name="Job_Posting_Group" ColumnName="Job Posting Group" />
+                <ScalarProperty Name="WIP_Total" ColumnName="WIP-Total" />
+                <ScalarProperty Name="Job_Task_Type" ColumnName="Job Task Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Job_Task_No_" ColumnName="Job Task No_" />
+                <ScalarProperty Name="Job_No_" ColumnName="Job No_" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MCT_Teknoloji_A_Ş__Work_Type">
+            <EntityTypeMapping TypeName="mct2016Model.MCT_Teknoloji_A_Ş__Work_Type">
+              <MappingFragment StoreEntitySet="MCT Teknoloji A_Ş_$Work Type$437dbf0e-84ff-417a-965d-ed2bb9650972">
+                <ScalarProperty Name="C_systemId" ColumnName="$systemId" />
+                <ScalarProperty Name="Unit_of_Measure_Code" ColumnName="Unit of Measure Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

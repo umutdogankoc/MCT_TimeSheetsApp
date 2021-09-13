@@ -1,16 +1,19 @@
 ﻿using DataAccessLayer;
 using MCT_TimeSheetsApp.Engine;
 using MCT_TimeSheetsApp.Models._Layout;
+using MCT_TimeSheetsApp.Models.Home.Time_Sheets;
 using ServiceLayer;
 using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
+
 namespace MCT_TimeSheetsApp.Controllers
 {
     public class HomeController : Controller
     {
-        private Resource GetSessionResource()
+        private MCT_Teknoloji_A_Ş__Resource GetSessionResource()
         {
-            return new ResourceService().GetById((Session["ResourceSession"] as Resource).No_);
+            return new ResourceService().GetById((Session["ResourceSession"] as MCT_Teknoloji_A_Ş__Resource).No_);
         }
 
         public HomeLayoutModel PopulateHomeLayout()
@@ -26,6 +29,7 @@ namespace MCT_TimeSheetsApp.Controllers
         public ActionResult Dashboard()
         {
             HomeLayoutModel homeLayout = PopulateHomeLayout();
+            homeLayout.DashboradPageModel = new PageFillingEngine().FillDashboardPage(GetSessionResource());
             return View(homeLayout);
         }
 
@@ -41,10 +45,23 @@ namespace MCT_TimeSheetsApp.Controllers
         {
             PageFillingEngine pageFillingEngine = new PageFillingEngine();
             HomeLayoutModel homeLayout = PopulateHomeLayout();
-            Time_Sheet_Header currentHeader = new TimeSheetHeaderService().GetBySystemId(TimeSheetId);
+            MCT_Teknoloji_A_Ş__Time_Sheet_Header currentHeader = new TimeSheetHeaderService().GetBySystemId(TimeSheetId);
             homeLayout.ResourceTimeSheetPageModel = pageFillingEngine.FillTimeSheetLinePage(currentHeader);
+            homeLayout.ResourceTimeSheetPageModel.JobPlanningLines = pageFillingEngine.FillTimeSheetJobPlanningLines(GetSessionResource(),Convert.ToDateTime(currentHeader.Starting_Date),Convert.ToDateTime(currentHeader.Ending_Date));
+            homeLayout.ResourceTimeSheetPageModel.Work_Types = pageFillingEngine.FillWorkTypes();
+
             return View(homeLayout);
            
+        }
+            
+
+        public ActionResult Logout()
+        {
+            if (Session["ResourceSession"]!=null)
+            {
+                Session["ResourceSession"] = null;
+            }
+            return RedirectToAction("Login", "Login");
         }
 
     }

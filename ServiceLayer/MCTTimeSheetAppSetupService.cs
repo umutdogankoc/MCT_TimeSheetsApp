@@ -8,12 +8,12 @@ using DataAccessLayer;
 
 namespace ServiceLayer
 {
-    public class MCTTimeSheetAppSetupService : BaseService
+    public class MCTTimeSheetAppSetupService : BaseServiceLive
     {
 
-        public MCTTimeSheetAppSetup Get()
+        public MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup Get()
         {
-            return Database.MCTTimeSheetAppSetup.FirstOrDefault();
+            return Database.MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup.FirstOrDefault();
         }
 
     }

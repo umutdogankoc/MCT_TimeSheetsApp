@@ -8,7 +8,7 @@ namespace MCT_TimeSheetsApp.Models.Home.Time_Sheets
 {
     public class TimeSheetLineModel
     {
-        public Time_Sheet_Line TimeSheetLine { get; set; }
-        public List<Time_Sheet_Detail> TimeSheetLineDetails { get; set; }
+        public MCT_Teknoloji_A_Ş__Time_Sheet_Line TimeSheetLine { get; set; }
+        public List<MCT_Teknoloji_A_Ş__Time_Sheet_Detai> TimeSheetLineDetails { get; set; }
     }
 }

@@ -12,21 +12,12 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Salesperson_Purchaser
+    public partial class MCT_Teknoloji_A_Ş__Work_Type
     {
         public byte[] timestamp { get; set; }
         public string Code { get; set; }
-        public string Name { get; set; }
-        public decimal Commission__ { get; set; }
-        public System.Guid Image { get; set; }
-        public byte Privacy_Blocked { get; set; }
-        public string Global_Dimension_1_Code { get; set; }
-        public string Global_Dimension_2_Code { get; set; }
-        public string E_Mail { get; set; }
-        public string Phone_No_ { get; set; }
-        public string Job_Title { get; set; }
-        public string Search_E_Mail { get; set; }
-        public string E_Mail_2 { get; set; }
+        public string Description { get; set; }
+        public string Unit_of_Measure_Code { get; set; }
         public System.Guid C_systemId { get; set; }
     }
 }

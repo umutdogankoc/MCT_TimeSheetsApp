@@ -80,7 +80,7 @@ var addRowTable = {
     },
     build: function () {
         return this.datatable = this.$table.DataTable({
-            aoColumns: [null, null, null, null, null, null, null, null, null, null, {
+            aoColumns: [null, null, null, null, null, null, null, null, null, null,null,null,null, {
                 bSortable: !1
             }],
         }), window.dt = this.datatable, this
@@ -134,7 +134,7 @@ var addRowTable = {
         $row.children("td").each(function (i) {
             var $this = $(this);
             if ($this.hasClass("actions")) object.rowSetActionsEditing($row);
-            if ($this.hasClass("timeSheetLineHours")) $this.html('<input type="text" class="form-control input-block" value="' + data[i] + '" data-DateId ="' +$this.attr('dateId') + '" data-LineId ="' + $this.attr('lineId') + '" data-HeaderId="' + $this.attr('headerId')+'" />');
+            if ($this.hasClass("timeSheetLineHours")) $this.html('<input type="number"  min="0" max="24" class="form-control input-block" value="' + data[i] + '" data-DateId ="' +$this.attr('dateId') + '" data-LineId ="' + $this.attr('lineId') + '" data-HeaderId="' + $this.attr('headerId')+'" />');
         })
     },
     //rowSave: function ($row) {

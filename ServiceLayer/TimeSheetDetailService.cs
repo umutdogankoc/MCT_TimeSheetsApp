@@ -8,45 +8,45 @@ using DataAccessLayer;
 
 namespace ServiceLayer
 {
-    public class TimeSheetDetailService : BaseService, IRepository<Time_Sheet_Detail>
+    public class TimeSheetDetailService : BaseServiceLive, IRepository<MCT_Teknoloji_A_Ş__Time_Sheet_Detai>
     {
-        public Time_Sheet_Detail Delete(Time_Sheet_Detail param)
+        public MCT_Teknoloji_A_Ş__Time_Sheet_Detai Delete(MCT_Teknoloji_A_Ş__Time_Sheet_Detai param)
         {
             throw new NotImplementedException();
         }
 
-        public List<Time_Sheet_Detail> GetAll()
+        public List<MCT_Teknoloji_A_Ş__Time_Sheet_Detai> GetAll()
         {
-            return Database.Time_Sheet_Detail.ToList();
+            return Database.MCT_Teknoloji_A_Ş__Time_Sheet_Detail.ToList();
         }
 
-        public List<Time_Sheet_Detail> GetByCode(string param)
+        public List<MCT_Teknoloji_A_Ş__Time_Sheet_Detai> GetByCode(string param)
         {
             return GetAll().Where(p => p.Time_Sheet_No_ == param).ToList();
         }
 
-        public Time_Sheet_Detail GetById(string param)
+        public MCT_Teknoloji_A_Ş__Time_Sheet_Detai GetById(string param)
         {
             throw new NotImplementedException();
         }
 
-        public Time_Sheet_Detail Insert(Time_Sheet_Detail param)
+        public MCT_Teknoloji_A_Ş__Time_Sheet_Detai Insert(MCT_Teknoloji_A_Ş__Time_Sheet_Detai param)
         {
             throw new NotImplementedException();
 
         }
 
-        public Time_Sheet_Detail Update(Time_Sheet_Detail param)
+        public MCT_Teknoloji_A_Ş__Time_Sheet_Detai Update(MCT_Teknoloji_A_Ş__Time_Sheet_Detai param)
         {
             throw new NotImplementedException();
         }
 
-        public List<Time_Sheet_Detail> GetByLineNo(string param1, int param2)
+        public List<MCT_Teknoloji_A_Ş__Time_Sheet_Detai> GetByLineNo(string param1, int param2)
         {
             return GetByCode(param1).Where(p => p.Time_Sheet_Line_No_ == param2).ToList();
         }
 
-        public Time_Sheet_Detail Get(string param1, int param2, DateTime param3)
+        public MCT_Teknoloji_A_Ş__Time_Sheet_Detai Get(string param1, int param2, DateTime param3)
         {
             return GetByLineNo(param1, param2).Where(p => p.Date == param3).SingleOrDefault();
         }

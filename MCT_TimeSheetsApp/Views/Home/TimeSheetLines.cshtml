@@ -7,6 +7,14 @@
 @model MCT_TimeSheetsApp.Models._Layout.HomeLayoutModel
 @using MCT_TimeSheetsApp.Models.Home.Time_Sheets
 @using DataAccessLayer;
+@using DataAccessLayer.Enum;
+@using ServiceLayer;
+
+<style>
+    .form-control {
+        border-color: white !important;
+    }
+</style>
 <div id="main-content">
     <div class="container-fluid">
         <div class="block-header">
@@ -53,35 +61,68 @@
             </div>
         </div>
         <br />
+        <a class="btn btn-primary" href="#newTimeSheetLineModal" data-toggle="modal" data-target="#newTimeSheetLineModal">
+            <i class="fa fa-plus">
+            </i>
+            <span>Create New</span>
+        </a>
+
         <div class="row clearfix">
             <div class="col-lg-12">
                 <div class="card">
-
                     <div class="body">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped" cellspacing="0" id="addrowExample">
+                            <table class="table" cellspacing="0" id="addrowExample">
                                 <thead>
                                     <tr>
                                         <th>Job No.</th>
+                                        <th>Job Description</th>
                                         <th>Job Task No.</th>
-                                        <th>Descripton</th>
-                                        @for (DateTime i = @Model.ResourceTimeSheetPageModel.CurrentTimeSheetHeader.Starting_Date; i < @Model.ResourceTimeSheetPageModel.CurrentTimeSheetHeader.Ending_Date.AddDays(1);i= i.AddDays(1))
+                                        <th>Job Task Description</th>
+                                        <th>Work Type Code</th>
+                                        <th>Status</th>
+                                        @for (DateTime i = @Model.ResourceTimeSheetPageModel.CurrentTimeSheetHeader.Starting_Date; i < @Model.ResourceTimeSheetPageModel.CurrentTimeSheetHeader.Ending_Date.AddDays(1); i = i.AddDays(1))
                                         {
                                             <th>@i.ToShortDateString()</th>
                                         }
                                         <th>Actions</th>
 
                                     </tr>
+
                                 </thead>
-                                <tbody>
-                                    @foreach (Time_Sheet_Line timesheetline in Model.ResourceTimeSheetPageModel.ResourceTimeSheetLines)
+                                <tbody id="target">
+                                    @foreach (MCT_Teknoloji_A_Ş__Time_Sheet_Line timesheetline in Model.ResourceTimeSheetPageModel.ResourceTimeSheetLines)
                                     {
+
+                                        TimeSheetStatusEnum statusEnum = (TimeSheetStatusEnum)timesheetline.Status;
+
                                         <tr class="gradeA">
                                             <td>@timesheetline.Job_No_</td>
+                                            <td>@timesheetline.JobDescription</td>
                                             <td>@timesheetline.Job_Task_No_</td>
                                             <td>@timesheetline.Description</td>
+                                            <td>@timesheetline.Work_Type_Code </td>
+                                            @{
+                                                if (statusEnum == TimeSheetStatusEnum.Approved)
+                                                {
+                                                    <td><button type="button" class="btn btn-sm btn-outline-success">@statusEnum.ToString()</button></td>
+                                                }
+                                                if (statusEnum == TimeSheetStatusEnum.Rejected)
+                                                {
+                                                    <td><button type="button" class="btn btn-sm btn-outline-danger">@statusEnum.ToString()</button></td>
+                                                }
+                                                if (statusEnum == TimeSheetStatusEnum.Open)
+                                                {
+                                                    <td><button type="button" class="btn btn-sm btn-outline-primary">@statusEnum.ToString()</button></td>
+                                                }
+                                                if (statusEnum == TimeSheetStatusEnum.Submitted)
+                                                {
+                                                    <td><button type="button" class="btn btn-sm btn-outline-warning">@statusEnum.ToString()</button></td>
+                                                }
 
-                                            @foreach (Time_Sheet_Detail lineDetail in Model.ResourceTimeSheetPageModel.ResourceTimeSheetLineDetails.Where(p=>p.Time_Sheet_Line_No_==timesheetline.Line_No_).ToList())
+                                            }
+
+                                            @foreach (MCT_Teknoloji_A_Ş__Time_Sheet_Detai lineDetail in Model.ResourceTimeSheetPageModel.ResourceTimeSheetLineDetails.Where(p => p.Time_Sheet_Line_No_ == timesheetline.Line_No_).ToList())
                                             {
                                                 <td dateId="@lineDetail.Date.ToShortDateString()" lineId="@lineDetail.Time_Sheet_Line_No_" headerId="@lineDetail.Time_Sheet_No_" class="timeSheetLineHours">@lineDetail.Quantity.ToString("N0")</td>
                                             }
@@ -102,7 +143,7 @@
                                             </td>
                                         </tr>
 
-                                    }
+                                                }
 
                                 </tbody>
                             </table>
@@ -114,3 +155,111 @@
 
     </div>
 </div>
+
+<div class="modal" id="newTimeSheetLineModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" id="smallModalLabel2">New Time Sheet Line</h4>
+            </div>
+            <div class="modal-body">
+                <form id="createNewTimeSheetLineForm" class="form-auth-small">
+                    <div class="form-group">
+                        <label class="control-label">Job Planning Line:</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="icon-plus" href="#jobPlanningLinesModal" data-toggle="modal" data-target="#jobPlanningLinesModal"></i></span>
+                            </div>
+                            <input type="text" id="NewTSLine_JobPlanLineNo" class="form-control" placeholder="Job Planning Line No" readonly>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label id="lblTimeSheetHeaderNo" hidden="hidden">@Model.ResourceTimeSheetPageModel.CurrentTimeSheetHeader.No_</label>
+                        <label class="control-label">Job No:</label>
+                        <input id="NewTSLine_JobNo" type="text" class="form-control" placeholder="Job No" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Job Task No:</label>
+                        <input id="NewTSLine_JobTaskNo" type="tel" class="form-control" placeholder="Job Task No." readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Description:</label>
+                        <input id="NewTSLine_JobPDescription" type="text" class="form-control" placeholder="Description" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Work Type Code:</label>
+                        <select class="form-control" style="border-color:black !important" id="TimeSheetWorkTypeCode" required>
+                               @{ 
+
+                                   foreach (MCT_Teknoloji_A_Ş__Work_Type workType in Model.ResourceTimeSheetPageModel.Work_Types)
+                                   {
+                                       <option id="@workType.Code">@workType.Code - @workType.Description</option>
+                                   }
+                               }
+                        </select>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button id="btnCreatenewTimeSheetLineSubmit" type="button" class="btn btn-primary">Create</button>
+                        <button id="btnCreateNewTimeSheetLineCancel" type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button id="btnCreateNewTimeSheetLineWait" type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-refresh fa-spin"></i> <span>Please Wait...</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="jobPlanningLinesModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" style="width:1800px;" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" id="smallModalLabel3">Job Planning Lines</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row-clearfix">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="body">
+                                <div class="table-responsive">
+                                    <table class="table" style="word-wrap:break-word;overflow-x:scroll" cellspacing="0">
+                                        <thead>
+                                            <tr class="gradeA">
+                                                <th>Action</th>
+                                                <th>Job No.</th>
+                                                <th>Job Description</th>
+                                                <th>Job Task No.</th>
+                                                <th>Job Task Description</th>
+                                                <th>Planning Date</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="overflow-x:scroll">
+                                            @foreach (JobPlanningLinesPageModel jobplanninglinemodel in Model.ResourceTimeSheetPageModel.JobPlanningLines)
+                                            {
+                                                <tr style="overflow:scroll">
+                                                    <td><btn id="btnSelectJobPlanningLine" class="btn btn-info" title="Select"><i class="fa fa-check" style="color:white"></i></btn></td>
+                                                    <td id="planLineJobNo">@jobplanninglinemodel.JobNo</td>
+                                                    <td id="planLineJobDesc">@jobplanninglinemodel.JobDescription </td>
+                                                    <td id="planLineJobTaskNo">@jobplanninglinemodel.JobTaskNo </td>
+                                                    <td>@jobplanninglinemodel.JobTaskDescription </td>
+                                                    <td id="planLinePlanDate">@jobplanninglinemodel.PlanningDate.ToShortDateString() </td>
+                                                    <td>@jobplanninglinemodel.Description </td>
+                                                </tr>
+
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

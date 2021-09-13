@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="498e945ca0954c759e339c829f819dcc" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" FillColor="0, 192, 0" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Resource_Ext" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" FillColor="Aqua" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Resource" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Salesperson_Purchaser" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Time_Sheet_Detai" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Time_Sheet_Header" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Time_Sheet_Line" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" FillColor="Lime" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Job" Width="1.5" PointX="0.75" PointY="10.75" FillColor="Lime" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Job_Planning_Line_Ext" Width="1.5" PointX="11" PointY="0.625" FillColor="Aqua" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Job_Planning_Line" Width="1.5" PointX="12.875" PointY="0.625" FillColor="Lime" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Job_Task" Width="1.5" PointX="3.375" PointY="11.75" FillColor="Lime" />
+        <EntityTypeShape EntityType="mct2016Model.MCT_Teknoloji_A_Ş__Work_Type" Width="1.5" PointX="5.375" PointY="11.75" FillColor="Lime" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

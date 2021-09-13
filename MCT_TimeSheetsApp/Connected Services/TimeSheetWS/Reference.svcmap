@@ -19,10 +19,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://udk-dev:7047/BC160/WS/CRONUS%20International%20Ltd./Codeunit/TimeSheetAppWebService" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://udk-dev:7062/MCT/WS/MCT%20Teknoloji%20A.%C5%9E./Codeunit/UDKTimeSheetWS" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TimeSheetAppWebService.wsdl" MetadataType="Wsdl" ID="0352ea2f-8db6-4ed9-8551-4f13cc177f33" SourceId="1" SourceUrl="http://udk-dev:7047/BC160/WS/CRONUS International Ltd./Codeunit/TimeSheetAppWebService" />
+    <MetadataFile FileName="UDKTimeSheetWS.wsdl" MetadataType="Wsdl" ID="c4b5c536-11aa-424f-a1c8-3e59490bb4ea" SourceId="1" SourceUrl="http://udk-dev:7062/MCT/WS/MCT Teknoloji A.Ş./Codeunit/UDKTimeSheetWS" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

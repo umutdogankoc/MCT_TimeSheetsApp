@@ -12,9 +12,10 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class MCTSPWebLoginCredentials
+    public partial class MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials
     {
         public byte[] timestamp { get; set; }
+        public string ResourceNo { get; set; }
         public string MCTSPLoginPrimaryKey { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
@@ -25,6 +26,5 @@ namespace DataAccessLayer
         public System.DateTime ModifiedDate { get; set; }
         public System.DateTime ModifiedTime { get; set; }
         public System.Guid C_systemId { get; set; }
-        public string ResourceNo { get; set; }
     }
 }

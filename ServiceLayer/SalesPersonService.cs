@@ -8,34 +8,34 @@ using DataAccessLayer;
 
 namespace ServiceLayer
 {
-    public class SalesPersonService : BaseService, IRepository<Salesperson_Purchaser>
+    public class SalesPersonService : BaseServiceLive, IRepository<MCT_Teknoloji_A_Ş__Salesperson_Purchaser>
     {
-        public Salesperson_Purchaser Delete(Salesperson_Purchaser param)
+        public MCT_Teknoloji_A_Ş__Salesperson_Purchaser Delete(MCT_Teknoloji_A_Ş__Salesperson_Purchaser param)
         {
             throw new NotImplementedException();
         }
 
-        public List<Salesperson_Purchaser> GetAll()
+        public List<MCT_Teknoloji_A_Ş__Salesperson_Purchaser> GetAll()
         {
-            return Database.Salesperson_Purchaser.ToList();
+            return Database.MCT_Teknoloji_A_Ş__Salesperson_Purchaser.ToList();
         }
 
-        public List<Salesperson_Purchaser> GetByCode(string param)
+        public List<MCT_Teknoloji_A_Ş__Salesperson_Purchaser> GetByCode(string param)
         {
             throw new NotImplementedException();
         }
 
-        public Salesperson_Purchaser GetById(string param)
+        public MCT_Teknoloji_A_Ş__Salesperson_Purchaser GetById(string param)
         {
             return GetAll().Where(p => p.Code == param).SingleOrDefault();
         }
 
-        public Salesperson_Purchaser Insert(Salesperson_Purchaser param)
+        public MCT_Teknoloji_A_Ş__Salesperson_Purchaser Insert(MCT_Teknoloji_A_Ş__Salesperson_Purchaser param)
         {
             throw new NotImplementedException();
         }
 
-        public Salesperson_Purchaser Update(Salesperson_Purchaser param)
+        public MCT_Teknoloji_A_Ş__Salesperson_Purchaser Update(MCT_Teknoloji_A_Ş__Salesperson_Purchaser param)
         {
             throw new NotImplementedException();
         }

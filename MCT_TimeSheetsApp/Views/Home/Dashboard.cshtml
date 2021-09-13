@@ -3,6 +3,109 @@
     ViewBag.Title = "Dashboard";
     Layout = "~/Views/Layouts/_HomeLayout.cshtml";
 }
+@model MCT_TimeSheetsApp.Models._Layout.HomeLayoutModel
 
-<h2>Dashboard</h2>
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-5 col-md-8 col-sm-12">
+                    <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>My Dashboard</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Home/Dashboard"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ul>
+                </div>
+                <div class="col-lg-7 col-md-4 col-sm-12 text-right">
+                    <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                        <div class="sparkline text-left" data-type="line" data-width="8em" data-height="20px" data-line-Width="1" data-line-Color="#00c5dc"
+                             data-fill-Color="transparent">3,5,1,6,5,4,8,3</div>
+                        <span>Visitors</span>
+                    </div>
+                    <div class="inlineblock text-center m-r-15 m-l-15 hidden-sm">
+                        <div class="sparkline text-left" data-type="line" data-width="8em" data-height="20px" data-line-Width="1" data-line-Color="#f4516c"
+                             data-fill-Color="transparent">4,6,3,2,5,6,5,4</div>
+                        <span>Visits</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-lg-3 col-md-6">
+                <div class="card overflowhidden">
+                    <div class="body">
+                        <h3>@Model.DashboradPageModel.TimeSheetProjectQty <i class="icon-layers float-right"></i></h3>
+                        <span>Time Sheet Projects</span>
+                    </div>
+                    <div class="progress progress-xs progress-transparent custom-color-blue m-b-0">
+                        <div class="progress-bar" data-transitiongoal="64"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card overflowhidden">
+                    <div class="body">
+                        <h3>@Model.DashboradPageModel.OpenTimeSheetQty<i class="icon-target float-right"></i></h3>
+                        <span>Open Time Sheets</span>
+                    </div>
+                    <div class="progress progress-xs progress-transparent custom-color-orange m-b-0">
+                        <div class="progress-bar" data-transitiongoal="67"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card overflowhidden">
+                    <div class="body">
+                        <h3>@Model.DashboradPageModel.SubmittedTimeSheetQty<i class="fa fa-paper-plane float-right"></i></h3>
+                        <span>Submitted Time Sheets</span>
+                    </div>
+                    <div class="progress progress-xs progress-transparent custom-color-yellow m-b-0">
+                        <div class="progress-bar" data-transitiongoal="89"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card overflowhidden">
+                    <div class="body">
+                        <h3>@Model.DashboradPageModel.ApprovedTimeSheetQty <i class="fa fa-check float-right"></i></h3>
+                        <span>Approved Time Sheets</span>
+                    </div>
+                    <div class="progress progress-xs progress-transparent custom-color-green m-b-0">
+                        <div class="progress-bar" data-transitiongoal="68"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-lg-3 col-md-6">
+                <div class="card overflowhidden">
+                    <div class="body">
+                        <h3>@Model.DashboradPageModel.PostedTimeSheetQty<i class="fa fa-dollar float-right"></i></h3>
+                        <span>Posted Time Sheets</span>
+                    </div>
+                    <div class="progress progress-xs progress-transparent custom-color-lightseagreen m-b-0">
+                        <div class="progress-bar" data-transitiongoal="64"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card overflowhidden">
+                    <div class="body">
+                        <h3>@Model.DashboradPageModel.RejectedTimeSheetQty <i class="fa fa-warning float-right"></i></h3>
+                        <span>Rejected Time Sheets</span>
+                    </div>
+                    <div class="progress progress-xs progress-transparent m-b-0 custom-color-red">
+                        <div class="progress-bar" data-transitiongoal="67"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
 

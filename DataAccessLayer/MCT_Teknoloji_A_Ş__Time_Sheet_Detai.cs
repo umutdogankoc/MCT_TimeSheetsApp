@@ -12,7 +12,7 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class Time_Sheet_Detail
+    public partial class MCT_Teknoloji_A_Ş__Time_Sheet_Detai
     {
         public byte[] timestamp { get; set; }
         public string Time_Sheet_No_ { get; set; }
@@ -31,10 +31,10 @@ namespace DataAccessLayer
         public int Assembly_Order_Line_No_ { get; set; }
         public int Status { get; set; }
         public byte Posted { get; set; }
-        public int Dimension_Set_ID { get; set; }
         public System.Guid Id { get; set; }
         public System.DateTime Last_Modified_DateTime { get; set; }
-        public System.Guid Job_Id { get; set; }
         public System.Guid C_systemId { get; set; }
+        public int Dimension_Set_ID { get; set; }
+        public System.Guid Job_Id { get; set; }
     }
 }

@@ -40,18 +40,20 @@
                 <div class="card">
                     <div class="header">
                         <h2>Time Sheets Table <small>You can see the list of your time sheets.</small> </h2>
-                    </div>
-                    <div class="body">
-                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-default btn-filter" data-target="all">Todos</button>
-                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-success btn-filter" data-target="approved">Approved</button>
-                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-warning btn-filter" data-target="suspended">Suspended</button>
-                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-info btn-filter" data-target="pending">Pending</button>
-                        <button type="button" class="btn mb-1 btn-simple btn-sm btn-danger btn-filter" data-target="blocked">Blocked</button>
+                        <br />
+                        <a class="btn btn-primary" href="#newTimeSheetModal" data-toggle="modal" data-target="#newTimeSheetModal">
+                            <i class="fa fa-plus">
+                            </i>
+                            <span>Create New</span>
+                        </a>
 
+                    </div>
+
+                    <div class="body">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-filter table-hover js-basic-example dataTable table-custom">
+                            <table class="table  table-filter js-basic-example dataTable table-custom">
                                 <thead>
-                                    <tr data-target="all">
+                                    <tr>
                                         <th class="sorting_desc" aria-sort="descending">No</th>
                                         <th>Starting Date</th>
                                         <th>Ending Date</th>
@@ -62,9 +64,9 @@
                                 </thead>
                                 <tbody>
                                     @{
-                                        foreach (Time_Sheet_Header timeSheets in Model.ResourceTimeSheetPageModel.ResourceTimeSheetHeaders)
+                                        foreach (MCT_Teknoloji_A_Ş__Time_Sheet_Header timeSheets in Model.ResourceTimeSheetPageModel.ResourceTimeSheetHeaders)
                                         {
-                                            <tr>
+                                            <tr data-status="approved">
                                                 <td>@timeSheets.No_</td>
                                                 <td>@timeSheets.Starting_Date.ToShortDateString()</td>
                                                 <td>@timeSheets.Ending_Date.ToShortDateString()</td>
@@ -72,7 +74,6 @@
                                                 <td>@timeSheets.Approver_User_ID</td>
                                                 <td><a href="/Home/TimeSheetLines/?TimeSheetId=@timeSheets.C_systemId" class="btn btn-info" title="Edit"><i class="fa fa-edit" style="color:white"></i></a></td>
                                             </tr>
-
                                         }
                                     }
                                 </tbody>
@@ -84,5 +85,28 @@
         </div>
     </div>
 </div>
+
+<div class="modal" id="newTimeSheetModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" id="smallModalLabel">New Time Sheet</h4>
+            </div>
+            <div class="modal-body">
+                <form id="createNewTimeSheetForm" class="form-auth-small">
+                    <div class="form-group">
+                        <label class="control-label">Starting Date:</label>
+                        <input id="NewTS_StartDate" type="date" class="form-control" placeholder="Starting Date" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnCreatenewTimeSheetSubmit" type="submit" class="btn btn-primary">Create</button>
+                        <button id="btnCreateNewTimeSheetCancel" type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 

@@ -53,52 +53,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MCTSPWebLoginCredentials.cs">
-      <DependentUpon>MCT_DatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MCTTimeSheetAppSetup.cs">
-      <DependentUpon>MCT_DatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MCT_DatabaseModel.Context.cs">
+    <Compile Include="Enum\TimeSheetStatusEnum.cs" />
+    <Compile Include="MCT_DBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MCT_DatabaseModel.Context.tt</DependentUpon>
+      <DependentUpon>MCT_DBModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="MCT_DatabaseModel.cs">
+    <Compile Include="MCT_DBModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MCT_DatabaseModel.tt</DependentUpon>
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="MCT_DatabaseModel.Designer.cs">
+    <Compile Include="MCT_DBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MCT_DatabaseModel.edmx</DependentUpon>
+      <DependentUpon>MCT_DBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Job.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Job_Planning_Line.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Job_Planning_Line_Ext.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Job_Task.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__MCTTimeSheetAppSetup.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Resource.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Resource_Ext.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Salesperson_Purchaser.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Time_Sheet_Detai.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Time_Sheet_Header.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Time_Sheet_Line.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MCT_Teknoloji_A_Ş__Work_Type.cs">
+      <DependentUpon>MCT_DBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource.cs">
-      <DependentUpon>MCT_DatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Salesperson_Purchaser.cs">
-      <DependentUpon>MCT_DatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Time_Sheet_Detail.cs">
-      <DependentUpon>MCT_DatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Time_Sheet_Header.cs">
-      <DependentUpon>MCT_DatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Time_Sheet_Line.cs">
-      <DependentUpon>MCT_DatabaseModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="MCT_DatabaseModel.edmx">
+    <EntityDeploy Include="MCT_DBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MCT_DatabaseModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>MCT_DBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="MCT_DatabaseModel.edmx.diagram">
-      <DependentUpon>MCT_DatabaseModel.edmx</DependentUpon>
+    <None Include="MCT_DBModel.edmx.diagram">
+      <DependentUpon>MCT_DBModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -106,15 +125,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MCT_DatabaseModel.Context.tt">
+    <Content Include="MCT_DBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MCT_DatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>MCT_DatabaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>MCT_DBModel.edmx</DependentUpon>
+      <LastGenOutput>MCT_DBModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="MCT_DatabaseModel.tt">
+    <Content Include="MCT_DBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MCT_DatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>MCT_DatabaseModel.cs</LastGenOutput>
+      <DependentUpon>MCT_DBModel.edmx</DependentUpon>
+      <LastGenOutput>MCT_DBModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

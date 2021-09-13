@@ -12,35 +12,142 @@ namespace MCT_TimeSheetsApp.TimeSheetWS {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService", ConfigurationName="TimeSheetWS.TimeSheetAppWebService_Port")]
-    public interface TimeSheetAppWebService_Port {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", ConfigurationName="TimeSheetWS.UDKTimeSheetWS_Port")]
+    public interface UDKTimeSheetWS_Port {
+        
+        // CODEGEN: Generating message contract since the wrapper name (CreateTimeSheetLine_Result) of message CreateTimeSheetLine_Result does not match the default value (CreateTimeSheetLine)
+        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:CreateTimeSheetLine", ReplyAction="*")]
+        MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine_Result CreateTimeSheetLine(MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:CreateTimeSheetLine", ReplyAction="*")]
+        System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine_Result> CreateTimeSheetLineAsync(MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (CreateTimeSheet_Result) of message CreateTimeSheet_Result does not match the default value (CreateTimeSheet)
+        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:CreateTimeSheet", ReplyAction="*")]
+        MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet_Result CreateTimeSheet(MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:CreateTimeSheet", ReplyAction="*")]
+        System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet_Result> CreateTimeSheetAsync(MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet request);
         
         // CODEGEN: Generating message contract since the wrapper name (InsertTimeSheetDetail_Result) of message InsertTimeSheetDetail_Result does not match the default value (InsertTimeSheetDetail)
-        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService:InsertTimeSheetDet" +
-            "ail", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:InsertTimeSheetDetail", ReplyAction="*")]
         MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail_Result InsertTimeSheetDetail(MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService:InsertTimeSheetDet" +
-            "ail", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:InsertTimeSheetDetail", ReplyAction="*")]
         System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail_Result> InsertTimeSheetDetailAsync(MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail request);
+        
+        // CODEGEN: Generating message contract since the wrapper name (UpdateTimeSheetDetail_Result) of message UpdateTimeSheetDetail_Result does not match the default value (UpdateTimeSheetDetail)
+        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:UpdateTimeSheetDetail", ReplyAction="*")]
+        MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail_Result UpdateTimeSheetDetail(MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:UpdateTimeSheetDetail", ReplyAction="*")]
+        System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail_Result> UpdateTimeSheetDetailAsync(MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertTimeSheetDetail", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateTimeSheetLine", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", IsWrapped=true)]
+    public partial class CreateTimeSheetLine {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=0)]
+        public string newLineJobNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=1)]
+        public string newLineJobTaskNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=2)]
+        public string newLineDescription;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=3)]
+        public string newLineWorkType;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=4)]
+        public string newTimeSheetLineHeaderNo;
+        
+        public CreateTimeSheetLine() {
+        }
+        
+        public CreateTimeSheetLine(string newLineJobNo, string newLineJobTaskNo, string newLineDescription, string newLineWorkType, string newTimeSheetLineHeaderNo) {
+            this.newLineJobNo = newLineJobNo;
+            this.newLineJobTaskNo = newLineJobTaskNo;
+            this.newLineDescription = newLineDescription;
+            this.newLineWorkType = newLineWorkType;
+            this.newTimeSheetLineHeaderNo = newTimeSheetLineHeaderNo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateTimeSheetLine_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", IsWrapped=true)]
+    public partial class CreateTimeSheetLine_Result {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=0)]
+        public string return_value;
+        
+        public CreateTimeSheetLine_Result() {
+        }
+        
+        public CreateTimeSheetLine_Result(string return_value) {
+            this.return_value = return_value;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateTimeSheet", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", IsWrapped=true)]
+    public partial class CreateTimeSheet {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=0)]
+        public string startingDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=1)]
+        public string resourceNo;
+        
+        public CreateTimeSheet() {
+        }
+        
+        public CreateTimeSheet(string startingDate, string resourceNo) {
+            this.startingDate = startingDate;
+            this.resourceNo = resourceNo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateTimeSheet_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", IsWrapped=true)]
+    public partial class CreateTimeSheet_Result {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=0)]
+        public string return_value;
+        
+        public CreateTimeSheet_Result() {
+        }
+        
+        public CreateTimeSheet_Result(string return_value) {
+            this.return_value = return_value;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertTimeSheetDetail", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", IsWrapped=true)]
     public partial class InsertTimeSheetDetail {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=0)]
         public string timeSheetHeaderNo;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService", Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=1)]
         public int timeSheetLineNo;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService", Order=2)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=2)]
         public string timeSheetDate;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=3)]
         public decimal quantity;
         
         public InsertTimeSheetDetail() {
@@ -57,10 +164,10 @@ namespace MCT_TimeSheetsApp.TimeSheetWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertTimeSheetDetail_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertTimeSheetDetail_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", IsWrapped=true)]
     public partial class InsertTimeSheetDetail_Result {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/TimeSheetAppWebService", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=0)]
         public string return_value;
         
         public InsertTimeSheetDetail_Result() {
@@ -71,35 +178,137 @@ namespace MCT_TimeSheetsApp.TimeSheetWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface TimeSheetAppWebService_PortChannel : MCT_TimeSheetsApp.TimeSheetWS.TimeSheetAppWebService_Port, System.ServiceModel.IClientChannel {
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateTimeSheetDetail", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", IsWrapped=true)]
+    public partial class UpdateTimeSheetDetail {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=0)]
+        public string timeSheetHeaderNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=1)]
+        public int timeSheetLineNo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=2)]
+        public string timeSheetDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=3)]
+        public decimal quantity;
+        
+        public UpdateTimeSheetDetail() {
+        }
+        
+        public UpdateTimeSheetDetail(string timeSheetHeaderNo, int timeSheetLineNo, string timeSheetDate, decimal quantity) {
+            this.timeSheetHeaderNo = timeSheetHeaderNo;
+            this.timeSheetLineNo = timeSheetLineNo;
+            this.timeSheetDate = timeSheetDate;
+            this.quantity = quantity;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class TimeSheetAppWebService_PortClient : System.ServiceModel.ClientBase<MCT_TimeSheetsApp.TimeSheetWS.TimeSheetAppWebService_Port>, MCT_TimeSheetsApp.TimeSheetWS.TimeSheetAppWebService_Port {
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateTimeSheetDetail_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", IsWrapped=true)]
+    public partial class UpdateTimeSheetDetail_Result {
         
-        public TimeSheetAppWebService_PortClient() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS", Order=0)]
+        public string return_value;
+        
+        public UpdateTimeSheetDetail_Result() {
         }
         
-        public TimeSheetAppWebService_PortClient(string endpointConfigurationName) : 
+        public UpdateTimeSheetDetail_Result(string return_value) {
+            this.return_value = return_value;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface UDKTimeSheetWS_PortChannel : MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class UDKTimeSheetWS_PortClient : System.ServiceModel.ClientBase<MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port>, MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port {
+        
+        public UDKTimeSheetWS_PortClient() {
+        }
+        
+        public UDKTimeSheetWS_PortClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public TimeSheetAppWebService_PortClient(string endpointConfigurationName, string remoteAddress) : 
+        public UDKTimeSheetWS_PortClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public TimeSheetAppWebService_PortClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public UDKTimeSheetWS_PortClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public TimeSheetAppWebService_PortClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public UDKTimeSheetWS_PortClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail_Result MCT_TimeSheetsApp.TimeSheetWS.TimeSheetAppWebService_Port.InsertTimeSheetDetail(MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail request) {
+        MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine_Result MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port.CreateTimeSheetLine(MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine request) {
+            return base.Channel.CreateTimeSheetLine(request);
+        }
+        
+        public string CreateTimeSheetLine(string newLineJobNo, string newLineJobTaskNo, string newLineDescription, string newLineWorkType, string newTimeSheetLineHeaderNo) {
+            MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine inValue = new MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine();
+            inValue.newLineJobNo = newLineJobNo;
+            inValue.newLineJobTaskNo = newLineJobTaskNo;
+            inValue.newLineDescription = newLineDescription;
+            inValue.newLineWorkType = newLineWorkType;
+            inValue.newTimeSheetLineHeaderNo = newTimeSheetLineHeaderNo;
+            MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine_Result retVal = ((MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port)(this)).CreateTimeSheetLine(inValue);
+            return retVal.return_value;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine_Result> MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port.CreateTimeSheetLineAsync(MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine request) {
+            return base.Channel.CreateTimeSheetLineAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine_Result> CreateTimeSheetLineAsync(string newLineJobNo, string newLineJobTaskNo, string newLineDescription, string newLineWorkType, string newTimeSheetLineHeaderNo) {
+            MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine inValue = new MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheetLine();
+            inValue.newLineJobNo = newLineJobNo;
+            inValue.newLineJobTaskNo = newLineJobTaskNo;
+            inValue.newLineDescription = newLineDescription;
+            inValue.newLineWorkType = newLineWorkType;
+            inValue.newTimeSheetLineHeaderNo = newTimeSheetLineHeaderNo;
+            return ((MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port)(this)).CreateTimeSheetLineAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet_Result MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port.CreateTimeSheet(MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet request) {
+            return base.Channel.CreateTimeSheet(request);
+        }
+        
+        public string CreateTimeSheet(string startingDate, string resourceNo) {
+            MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet inValue = new MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet();
+            inValue.startingDate = startingDate;
+            inValue.resourceNo = resourceNo;
+            MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet_Result retVal = ((MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port)(this)).CreateTimeSheet(inValue);
+            return retVal.return_value;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet_Result> MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port.CreateTimeSheetAsync(MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet request) {
+            return base.Channel.CreateTimeSheetAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet_Result> CreateTimeSheetAsync(string startingDate, string resourceNo) {
+            MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet inValue = new MCT_TimeSheetsApp.TimeSheetWS.CreateTimeSheet();
+            inValue.startingDate = startingDate;
+            inValue.resourceNo = resourceNo;
+            return ((MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port)(this)).CreateTimeSheetAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail_Result MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port.InsertTimeSheetDetail(MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail request) {
             return base.Channel.InsertTimeSheetDetail(request);
         }
         
@@ -109,12 +318,12 @@ namespace MCT_TimeSheetsApp.TimeSheetWS {
             inValue.timeSheetLineNo = timeSheetLineNo;
             inValue.timeSheetDate = timeSheetDate;
             inValue.quantity = quantity;
-            MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail_Result retVal = ((MCT_TimeSheetsApp.TimeSheetWS.TimeSheetAppWebService_Port)(this)).InsertTimeSheetDetail(inValue);
+            MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail_Result retVal = ((MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port)(this)).InsertTimeSheetDetail(inValue);
             return retVal.return_value;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail_Result> MCT_TimeSheetsApp.TimeSheetWS.TimeSheetAppWebService_Port.InsertTimeSheetDetailAsync(MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail request) {
+        System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail_Result> MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port.InsertTimeSheetDetailAsync(MCT_TimeSheetsApp.TimeSheetWS.InsertTimeSheetDetail request) {
             return base.Channel.InsertTimeSheetDetailAsync(request);
         }
         
@@ -124,7 +333,36 @@ namespace MCT_TimeSheetsApp.TimeSheetWS {
             inValue.timeSheetLineNo = timeSheetLineNo;
             inValue.timeSheetDate = timeSheetDate;
             inValue.quantity = quantity;
-            return ((MCT_TimeSheetsApp.TimeSheetWS.TimeSheetAppWebService_Port)(this)).InsertTimeSheetDetailAsync(inValue);
+            return ((MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port)(this)).InsertTimeSheetDetailAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail_Result MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port.UpdateTimeSheetDetail(MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail request) {
+            return base.Channel.UpdateTimeSheetDetail(request);
+        }
+        
+        public string UpdateTimeSheetDetail(string timeSheetHeaderNo, int timeSheetLineNo, string timeSheetDate, decimal quantity) {
+            MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail inValue = new MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail();
+            inValue.timeSheetHeaderNo = timeSheetHeaderNo;
+            inValue.timeSheetLineNo = timeSheetLineNo;
+            inValue.timeSheetDate = timeSheetDate;
+            inValue.quantity = quantity;
+            MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail_Result retVal = ((MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port)(this)).UpdateTimeSheetDetail(inValue);
+            return retVal.return_value;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail_Result> MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port.UpdateTimeSheetDetailAsync(MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail request) {
+            return base.Channel.UpdateTimeSheetDetailAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail_Result> UpdateTimeSheetDetailAsync(string timeSheetHeaderNo, int timeSheetLineNo, string timeSheetDate, decimal quantity) {
+            MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail inValue = new MCT_TimeSheetsApp.TimeSheetWS.UpdateTimeSheetDetail();
+            inValue.timeSheetHeaderNo = timeSheetHeaderNo;
+            inValue.timeSheetLineNo = timeSheetLineNo;
+            inValue.timeSheetDate = timeSheetDate;
+            inValue.quantity = quantity;
+            return ((MCT_TimeSheetsApp.TimeSheetWS.UDKTimeSheetWS_Port)(this)).UpdateTimeSheetDetailAsync(inValue);
         }
     }
 }

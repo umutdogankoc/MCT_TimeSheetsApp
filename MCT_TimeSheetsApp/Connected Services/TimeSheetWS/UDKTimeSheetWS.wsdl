@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="CreateTimeSheetLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="newLineJobNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newLineJobTaskNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newLineDescription" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newLineWorkType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newTimeSheetLineHeaderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateTimeSheetLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateTimeSheet">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="startingDate" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="resourceNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CreateTimeSheet_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertTimeSheetDetail">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="timeSheetHeaderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="timeSheetLineNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="timeSheetDate" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="quantity" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertTimeSheetDetail_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateTimeSheetDetail">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="timeSheetHeaderNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="timeSheetLineNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="timeSheetDate" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="quantity" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateTimeSheetDetail_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="CreateTimeSheetLine">
+    <part name="parameters" element="tns:CreateTimeSheetLine" />
+  </message>
+  <message name="CreateTimeSheetLine_Result">
+    <part name="parameters" element="tns:CreateTimeSheetLine_Result" />
+  </message>
+  <message name="CreateTimeSheet">
+    <part name="parameters" element="tns:CreateTimeSheet" />
+  </message>
+  <message name="CreateTimeSheet_Result">
+    <part name="parameters" element="tns:CreateTimeSheet_Result" />
+  </message>
+  <message name="InsertTimeSheetDetail">
+    <part name="parameters" element="tns:InsertTimeSheetDetail" />
+  </message>
+  <message name="InsertTimeSheetDetail_Result">
+    <part name="parameters" element="tns:InsertTimeSheetDetail_Result" />
+  </message>
+  <message name="UpdateTimeSheetDetail">
+    <part name="parameters" element="tns:UpdateTimeSheetDetail" />
+  </message>
+  <message name="UpdateTimeSheetDetail_Result">
+    <part name="parameters" element="tns:UpdateTimeSheetDetail_Result" />
+  </message>
+  <portType name="UDKTimeSheetWS_Port">
+    <operation name="CreateTimeSheetLine">
+      <input name="CreateTimeSheetLine" message="tns:CreateTimeSheetLine" />
+      <output name="CreateTimeSheetLine_Result" message="tns:CreateTimeSheetLine_Result" />
+    </operation>
+    <operation name="CreateTimeSheet">
+      <input name="CreateTimeSheet" message="tns:CreateTimeSheet" />
+      <output name="CreateTimeSheet_Result" message="tns:CreateTimeSheet_Result" />
+    </operation>
+    <operation name="InsertTimeSheetDetail">
+      <input name="InsertTimeSheetDetail" message="tns:InsertTimeSheetDetail" />
+      <output name="InsertTimeSheetDetail_Result" message="tns:InsertTimeSheetDetail_Result" />
+    </operation>
+    <operation name="UpdateTimeSheetDetail">
+      <input name="UpdateTimeSheetDetail" message="tns:UpdateTimeSheetDetail" />
+      <output name="UpdateTimeSheetDetail_Result" message="tns:UpdateTimeSheetDetail_Result" />
+    </operation>
+  </portType>
+  <binding name="UDKTimeSheetWS_Binding" type="tns:UDKTimeSheetWS_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="CreateTimeSheetLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:CreateTimeSheetLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateTimeSheetLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateTimeSheetLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateTimeSheet">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:CreateTimeSheet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateTimeSheet">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateTimeSheet_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InsertTimeSheetDetail">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:InsertTimeSheetDetail" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertTimeSheetDetail">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertTimeSheetDetail_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateTimeSheetDetail">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/UDKTimeSheetWS:UpdateTimeSheetDetail" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateTimeSheetDetail">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateTimeSheetDetail_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UDKTimeSheetWS">
+    <port name="UDKTimeSheetWS_Port" binding="tns:UDKTimeSheetWS_Binding">
+      <address location="http://udk-dev:7062/MCT/WS/MCT%20Teknoloji%20A.%C5%9E./Codeunit/UDKTimeSheetWS" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

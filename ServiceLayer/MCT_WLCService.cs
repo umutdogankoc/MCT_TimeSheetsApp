@@ -8,52 +8,52 @@ using DataAccessLayer;
 
 namespace ServiceLayer
 {
-    public class MCT_WLCService : BaseService, IRepository<MCTSPWebLoginCredentials>
+    public class MCT_WLCService : BaseServiceLive, IRepository<MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials>
     {
-        public MCTSPWebLoginCredentials Delete(MCTSPWebLoginCredentials param)
+        public MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials Delete(MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials param)
         {
             throw new NotImplementedException();
         }
 
-        public List<MCTSPWebLoginCredentials> GetAll()
+        public List<MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials> GetAll()
         {
-            return Database.MCTSPWebLoginCredentials.ToList();
+            return Database.MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials.ToList();
         }
 
-        public List<MCTSPWebLoginCredentials> GetByCode(string param)
+        public List<MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials> GetByCode(string param)
         {
             throw new NotImplementedException();
         }
 
-        public MCTSPWebLoginCredentials GetById(string param)
+        public MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials GetById(string param)
         {
             return GetAll().Where(p => p.ResourceNo == param).SingleOrDefault();
         }
 
-        public MCTSPWebLoginCredentials Insert(MCTSPWebLoginCredentials param)
+        public MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials Insert(MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials param)
         {
             throw new NotImplementedException();
         }
 
-        public MCTSPWebLoginCredentials Update(MCTSPWebLoginCredentials param)
+        public MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials Update(MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials param)
         {
-            MCTSPWebLoginCredentials updateUser = GetById(param.ResourceNo);
+            MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials updateUser = GetById(param.ResourceNo);
             updateUser = param;
             Database.SaveChanges();
             return param;
         }
 
-        public MCTSPWebLoginCredentials CheckLogin(string userName, string Password)
+        public MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials CheckLogin(string userName, string Password)
         {
             return GetAll().Where(p => p.UserName == userName && p.Password == Password).SingleOrDefault();
         }
 
-        public MCTSPWebLoginCredentials GetBySystemId(string param)
+        public MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials GetBySystemId(string param)
         {
             return GetAll().Where(p => p.C_systemId.ToString() == param).SingleOrDefault();
         }
 
-        public MCTSPWebLoginCredentials GetByUsername(string param)
+        public MCT_Teknoloji_A_Ş__MCTSPWebLoginCredentials GetByUsername(string param)
         {
             return GetAll().Where(p => p.UserName == param).SingleOrDefault();
         }

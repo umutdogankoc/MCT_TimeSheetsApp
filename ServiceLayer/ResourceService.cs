@@ -8,34 +8,34 @@ using DataAccessLayer;
 
 namespace ServiceLayer
 {
-    public class ResourceService : BaseService, IRepository<Resource>
+    public class ResourceService : BaseServiceLive, IRepository<MCT_Teknoloji_A_Ş__Resource>
     {
-        public Resource Delete(Resource param)
+        public MCT_Teknoloji_A_Ş__Resource Delete(MCT_Teknoloji_A_Ş__Resource param)
         {
             throw new NotImplementedException();
         }
 
-        public List<Resource> GetAll()
+        public List<MCT_Teknoloji_A_Ş__Resource> GetAll()
         {
-            return Database.Resource.ToList();
+            return Database.MCT_Teknoloji_A_Ş__Resource.ToList();
         }
 
-        public List<Resource> GetByCode(string param)
+        public List<MCT_Teknoloji_A_Ş__Resource> GetByCode(string param)
         {
             throw new NotImplementedException();
         }
 
-        public Resource GetById(string param)
+        public MCT_Teknoloji_A_Ş__Resource GetById(string param)
         {
             return GetAll().Where(p => p.No_ == param).SingleOrDefault();
         }
 
-        public Resource Insert(Resource param)
+        public MCT_Teknoloji_A_Ş__Resource Insert(MCT_Teknoloji_A_Ş__Resource param)
         {
             throw new NotImplementedException();
         }
 
-        public Resource Update(Resource param)
+        public MCT_Teknoloji_A_Ş__Resource Update(MCT_Teknoloji_A_Ş__Resource param)
         {
             throw new NotImplementedException();
         }
